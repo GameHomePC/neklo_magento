@@ -1,32 +1,3 @@
-//=============
-// mixin
-//=============
-@import "mixin/mixin";
-
-//=============
-// fonts
-//=============
-@import "fonts/fonts";
-
-//=============
-// core
-//=============
-@import "compass/reset";
-@import "core/global";
-@import "core/forms";
-
-//=============
-// animate
-//=============
-@import "animate/animate";
-
-//=============
-// module
-//=============
-@import "module/menu";
-
-//=============
-// susy
-//=============
-@import "../node_modules/susy/sass/susy";
+@import "framework";
+@import "core";
 

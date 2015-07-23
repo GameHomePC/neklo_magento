@@ -1,18 +1,21 @@
+//================
+// menuButton
+//================
 .menuButton {
     position: fixed;
     top: 0;
-    left: 0;
-    padding: 19px 21px;
-    cursor: pointer;
     font-size: 0;
+    padding: 19px 21px;
+    user-select: none;
+    cursor: pointer;
 }
 
 .menuButton__item {
     display: inline-block;
     vertical-align: top;
-    margin-left: 22px;
+    margin-right: 22px;
 
-    &:first-child { margin-left: 0; }
+    &:last-child { margin-left: 0; }
 }
 
 .menuButton__line {
@@ -31,4 +34,57 @@
     font-size: 14px;
     text-transform: uppercase;
     padding-top: 4px;
+    transition: all 0.2s ease;
+}
+
+.menuButton__close {
+    display: none;
+}
+
+.menuButton__iconClose {
+    display: inline-block;
+    @include my-sprite(closeN);
+}
+//================
+// menuNav
+//================
+.menuNav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 360px;
+    background: url('../images/bg-nav.jpg');
+    padding: 90px 50px 90px 70px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.menuNav__list {
+    li {
+        margin-top: 15px;
+        transition: all 0.2s ease;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    a {
+        font-size: 38px;
+        font-weight: 100;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+}
+
+body.active_nav {
+    .window {
+        margin-left: 360px;
+    }
+
+    .menuButton__item { display: none; }
+    .menuButton__close { display: block; }
 }

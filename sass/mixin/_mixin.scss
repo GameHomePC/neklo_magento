@@ -16,13 +16,6 @@
     }
 }
 
-/* sprite */
-@mixin my-sprite($images){
-    @include my-sprite-sprite($images);
-    width: my-sprite-sprite-width($images);
-    height: my-sprite-sprite-height($images);
-}
-
 /*clearfix*/
 @mixin clearfix {
     &:after {content: ""; display: block; clear: both;}

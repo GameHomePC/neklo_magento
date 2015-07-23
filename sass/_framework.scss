@@ -1,0 +1,20 @@
+//=============
+// compass
+//=============
+@import "compass/utilities";
+
+
+@import "sprite/*.png";
+$box-padding: 5px;
+
+/* sprite */
+@mixin my-sprite($images){
+    @include sprite-sprite($images);
+    width: sprite-sprite-width($images);
+    height: sprite-sprite-height($images);
+}
+
+//=============
+// mixin
+//=============
+@import "mixin/mixin";
