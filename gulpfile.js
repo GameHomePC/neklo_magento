@@ -6,8 +6,6 @@ var googleWebFonts = require('gulp-google-webfonts');
 var browserSync = require('browser-sync').create();
 
 var conf = {
-    globalServer: 'https://dev.shopplanetblue.com',
-    localServer: 'planetblue-enterprise.loc',
     sass: {
         watch: './sass/**/*.scss',
         rubySass: 'sass/',
