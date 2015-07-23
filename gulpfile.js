@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var sass = require('gulp-sass');
 var rubySass = require('gulp-ruby-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
@@ -78,11 +77,6 @@ gulp.task('watch', function() {
     gulp.watch(conf.sass.watch, ['dev-sass']);
     gulp.watch(conf.fonts.listFonts, ['google-fonts']);
 });
-
-// ==============
-// build
-// ==============
-gulp.task('build', ['google-fonts', 'sass']);
 
 // ==============
 // default
