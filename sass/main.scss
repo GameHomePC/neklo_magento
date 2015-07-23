@@ -1,9 +1,7 @@
 //=============
-// core
+// mixin
 //=============
-@import "compass/reset";
-@import "core/global";
-@import "core/forms";
+@import "mixin/mixin";
 
 //=============
 // fonts
@@ -11,9 +9,11 @@
 @import "fonts/fonts";
 
 //=============
-// mixin
+// core
 //=============
-@import "mixin/mixin";
+@import "compass/reset";
+@import "core/global";
+@import "core/forms";
 
 //=============
 // animate
@@ -23,7 +23,7 @@
 //=============
 // module
 //=============
-
+@import "module/menu";
 
 //=============
 // susy

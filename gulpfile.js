@@ -32,26 +32,14 @@ gulp.task('google-fonts', function () {
 });
 
 // ==============
-// sass
-// ==============
-gulp.task('sass', function () {
-    return rubySass(conf.sass.rubySass, { compass: true })
-        .on('error', function (err) {
-            console.error('Error!', err.message);
-        })
-        .pipe(autoprefixer('last 3 version', '> 1%', 'ie 8', 'ie 7'))
-        .pipe(gulp.dest(conf.sass.css));
-});
-
-// ==============
 // dev-sass
 // ==============
 gulp.task('dev-sass', function () {
-    return rubySass(conf.sass.rubySass, { compass: true, sourcemap: true })
+    return rubySass(conf.sass.rubySass, { compass: true, sourcemap: false })
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
-        .pipe(autoprefixer('last 3 version', '> 1%', 'ie 7-10'))
+        .pipe(autoprefixer('last 30 version', '> 1%', 'ie 7-10'))
         .pipe(gulp.dest(conf.sass.css))
         .pipe(browserSync.reload({stream: true}));
 });

@@ -1,0 +1,34 @@
+.menuButton {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 19px 21px;
+    cursor: pointer;
+    font-size: 0;
+}
+
+.menuButton__item {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 22px;
+
+    &:first-child { margin-left: 0; }
+}
+
+.menuButton__line {
+    display: block;
+    background: #7c7c7c;
+    height: 3px;
+    width: 20px;
+    margin-top: 3px;
+
+    &:first-child { margin-top: 0; }
+}
+
+.menuButton__text {
+    display: inline-block;
+    color: #7c7c7c;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 4px;
+}
