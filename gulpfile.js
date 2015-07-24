@@ -50,7 +50,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "./"
         },
-        port: 9000
+        port: 9090
     });
 });
 

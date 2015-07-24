@@ -1,10 +1,28 @@
 body {
     font-family: $Roboto;
     font-size: 16px;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.main, .main__inner {
+    position: relative;
+}
+
+html, body, .main, .main__inner {
+    height: 100%;
 }
 
 .window {
     position: relative;
     transition: all 0.3s ease-in-out;
     z-index: 10;
+}
+
+.containers-wrap, .window {
+    position: absolute!important;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 }

@@ -8,6 +8,7 @@
     padding: 19px 21px;
     user-select: none;
     cursor: pointer;
+    z-index: 10;
 }
 
 .menuButton__item {
@@ -62,13 +63,16 @@
 }
 
 .menuNav__list {
-    li {
-        margin-top: 15px;
-        transition: all 0.2s ease;
+    counter-reset: li;
 
-        &:first-child {
-            margin-top: 0;
-        }
+    li {
+        animation-duration: 1s;
+        animation-fill-mode: none;
+        transition: all 0.2s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+        margin-top: 15px;
+        &:first-child { margin-top: 0; }
     }
 
     a {
@@ -80,6 +84,26 @@
     }
 }
 
+.menuNav__listMin {
+    margin-top: 50px;
+
+    li {
+        animation-duration: 1s;
+        animation-fill-mode: none;
+        transition: all 0.2s ease;
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    a {
+        font-size: 18px;
+        font-weight: 200;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+
+$columnsNav: 10;
 body.active_nav {
     .window {
         margin-left: 360px;
@@ -87,4 +111,26 @@ body.active_nav {
 
     .menuButton__item { display: none; }
     .menuButton__close { display: block; }
+
+    @for $i from 1 through $columnsNav {
+        .menuNav__list {
+            li:nth-child(#{$i}) {
+                animation-name: bounceInLeft;
+                animation-delay: $i * 50 + ms;
+                transition-delay: $i * 50 + ms;
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .menuNav__listMin {
+            li:nth-child(#{$i}) {
+                animation-name: bounceInLeft;
+                animation-delay: ($i + 7) * 50 + ms;
+                transition-delay: ($i + 7) * 50 + ms;
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+    }
 }

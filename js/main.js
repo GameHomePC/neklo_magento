@@ -1,14 +1,23 @@
 function Constructor(config) {
     this.body = $(config.body);
     this.navigationButtom = $(config.navigationButtom);
-    this.boxItem = $(config.boxItem);
+    this.container = $(config.container);
+    this.section = $(config.section);
+    this.containersWrap = $(config.containersWrap);
 }
 
+//===============
+// init
+//===============
 Constructor.prototype.init = function() {
     this.getNavigation();
-    this.getHeightBlocks();
+    this.isSectionActive();
+    this.getScrollPage();
 };
 
+//===============
+// getNavigation
+//===============
 Constructor.prototype.getNavigation = function() {
     var _this = this;
 
@@ -21,29 +30,68 @@ Constructor.prototype.getNavigation = function() {
     });
 };
 
-Constructor.prototype.getHeightBlocks = function() {
-    var _this = this;
+//=================
+// isSectionActive
+//=================
+Constructor.prototype.isSectionActive = function() {
+    var titleFunc = function(_this) {
+        _this.section.each(function() {
+            var self = $(this);
 
-    function setHeight() {
-        var height = $(window).height();
+            if(self.hasClass('active')) {
+                self.find('.title_js').textillate({
+                    autoStart: true,
+                    "in": {
+                        effect: "rollIn",
+                        shuffle: true
+                    }
+                });
+            }
+        });
+    };
 
-        _this.boxItem.css({
-            height: height
-        })
-    }
+    titleFunc(this);
+    //$(window).on('scroll', function() {
+    //    titleFunc(_this);
+    //});
 
-    setHeight();
-
-    $(window).resize(function() {
-        setHeight();
-    });
 };
 
+//=================
+// getScrollPage
+//=================
+Constructor.prototype.getScrollPage = function() {
+    var _this = this;
+
+    this.containersWrap.onepage_scroll({
+        sectionContainer: "section.container",
+        easing: "ease",
+        animationTime: 1e3,
+        pagination: true,
+        updateURL: true,
+        responsiveFallback: false,
+        beforeMove: function(a) {
+
+        },
+        afterMove: function(a) {
+
+        },
+        loop: false,
+        keyboard: true,
+        direction: "vertical"
+    })
+};
+
+//===============
+// Load
+//===============
 $(function() {
     var constructor = new Constructor({
         body: 'body',
         navigationButtom: '.menuButton',
-        boxItem: '.boxItem'
+        container: '.container',
+        section: 'section',
+        containersWrap: '.containers-wrap'
     });
 
     constructor.init();

@@ -1,0 +1,158 @@
+//====================
+// sectionOne
+//====================
+.sectionOne {
+    background: #fff;
+}
+
+.sectionOne__figure {
+    display: flex;
+    height: 100%;
+}
+
+.sectionOne__content {
+    position: relative;
+    margin: auto;
+}
+
+.sectionOne__logo {
+    display: block;
+    margin: 0 auto;
+    @include my-sprite(logo);
+}
+
+.sectionOne__title {
+    text-align: center;
+
+    span {
+        display: block;
+        font-weight: 200;
+        color: #888888;
+    }
+}
+
+.sectionOne__tTop {
+    font-size: 40px;
+    letter-spacing: -0.5px;
+    margin-top: 40px;
+}
+
+.sectionOne__tBottom {
+    font-size: 26px;
+}
+
+.sectionOne__leftIcon, .sectionOne__rightIcon {
+    position: absolute;
+    top: 26px;
+    width: 350px;
+    height: 180px;
+
+    i { position: absolute; }
+}
+
+.sectionOne__leftIcon { right: 71%; }
+.sO__iconL1 { @include my-sprite(Icon-1-0); left: -15px; top: 72px; }
+.sO__iconL2 { @include my-sprite(Icon-1-1); left: 73px; top: 64px; }
+.sO__iconL3 { @include my-sprite(Icon-1-2); left: 183px; top: 20px; }
+.sO__iconL4 { @include my-sprite(Icon-1-3); left: 203px; top: 94px; }
+.sO__iconL5 { @include my-sprite(Icon-1-4); left: 253px; top: 9px; }
+.sO__iconL6 { @include my-sprite(Icon-1-5); left: 303px; top: 107px; }
+.sO__iconL7 { @include my-sprite(Icon-1-6); left: 333px; top: 27px; }
+
+.sectionOne__rightIcon { left: 71%; }
+.sO__iconR1 { @include my-sprite(Icon-1-7); left: -37px; top: -7px; }
+.sO__iconR2 { @include my-sprite(Icon-1-8); left: -26px; top: 112px; }
+.sO__iconR3 { @include my-sprite(Icon-1-9); left: 80px; top: 30px; }
+.sO__iconR4 { @include my-sprite(Icon-1-10); left: 84px; top: 109px; }
+.sO__iconR5 { @include my-sprite(Icon-1-11); left: 168px; top: 38px; }
+.sO__iconR6 { @include my-sprite(Icon-1-12); left: 165px; top: 102px; }
+.sO__iconR7 { @include my-sprite(Icon-1-13); left: 251px; top: 68px; }
+
+.sectionOne__iconBottom {
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #27242d url("../images/sprite/arrowOne.png") center center no-repeat;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        bottom: 100%;
+        top: -48px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        background: #27242d;
+        animation-name: blueRound;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-play-state: running;
+        animation-fill-mode: none;
+        animation-delay: 0s;
+        content: "";
+    }
+
+    &:after {
+        position: absolute;
+        opacity: 0.4;
+        width: 12px;
+        height: 12px;
+        bottom: 100%;
+        top: -105px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 50%;
+        background: #27242d;
+        animation-name: blueRound;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        animation-play-state: running;
+        animation-fill-mode: none;
+        animation-delay: .2s;
+        content: "";
+    }
+}
+//====================
+// sectionOne.active
+//====================
+.sectionOne.active {
+    .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7,
+    .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7{
+        animation-name: inconIn;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(1,.28,.41,1.64);
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-play-state: running;
+        animation-fill-mode: both;
+    }
+
+    .sO__iconL1 { animation-delay: 300ms; }
+    .sO__iconL2 { animation-delay: 300ms; }
+    .sO__iconL3 { animation-delay: 600ms; }
+    .sO__iconL4 { animation-delay: 600ms; }
+    .sO__iconL5 { animation-delay: 900ms; }
+    .sO__iconL6 { animation-delay: 900ms; }
+    .sO__iconL7 { animation-delay: 1200ms; }
+
+    .sO__iconR7 { animation-delay: 300ms; }
+    .sO__iconR6 { animation-delay: 300ms; }
+    .sO__iconR5 { animation-delay: 600ms; }
+    .sO__iconR4 { animation-delay: 600ms; }
+    .sO__iconR3 { animation-delay: 900ms; }
+    .sO__iconR2 { animation-delay: 900ms; }
+    .sO__iconR1 { animation-delay: 1200ms; }
+}
