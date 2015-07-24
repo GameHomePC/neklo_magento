@@ -25,6 +25,7 @@
     height: 3px;
     width: 20px;
     margin-top: 3px;
+    transition-duration: 1s;
 
     &:first-child { margin-top: 0; }
 }
@@ -35,7 +36,7 @@
     font-size: 14px;
     text-transform: uppercase;
     padding-top: 4px;
-    transition: all 0.2s ease;
+    transition-duration: 1s;
 }
 
 .menuButton__close {
@@ -84,6 +85,10 @@
         text-decoration: none;
         transition: all 0.2s ease;
         opacity: 0.8;
+
+        &.active {
+            opacity: 1;
+        }
     }
 }
 

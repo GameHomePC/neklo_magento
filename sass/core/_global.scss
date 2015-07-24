@@ -64,3 +64,26 @@ html, body, .main, .main__inner {
     &:last-of-type { padding-right: 0!important; }
     &:first-of-type { padding-left: 0!important; }
 }
+
+/* activeColorMenu */
+body.activeColorMenu {
+    .menuButton__iconClose {
+        @include my-sprite(closeN-2);
+    }
+
+    .menuButton__text { color: #ffffff; }
+    .menuButton__line { background: #ffffff; }
+
+    .onepage-pagination li a:before {
+        background: #fff;
+    }
+    .onepage-pagination span { color: #ffffff; }
+}
+
+/* icon */
+.icon {
+    display: inline-block;
+}
+
+.icon_1 { @include my-sprite(chain) }
+.icon_2 { @include my-sprite(eye) }

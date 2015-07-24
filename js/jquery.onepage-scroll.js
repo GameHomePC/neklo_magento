@@ -27,7 +27,8 @@
         afterMove: null,
         loop: true,
         responsiveFallback: false,
-        direction : 'vertical'
+        direction : 'vertical',
+        paginationArray: []
     };
 
     /*------------------------------------------------*/
@@ -305,7 +306,7 @@
 
 
             if(settings.pagination == true) {
-                paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'></a></li>"
+                paginationList += "<li><a data-index='"+(i+1)+"' href='#" + (i+1) + "'><span>" + settings.paginationArray[i] + "</span></a></li>"
             }
         });
 

@@ -1,0 +1,113 @@
+.sectionThree {
+    background: url('../images/BG/Bg_Portfolio.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.sliderMain {
+    max-width: 480px;
+    margin: 40px auto 0;
+    font-size: 0;
+
+    .owl-prev, .owl-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    .owl-prev {
+        right: -95px;
+        @include my-sprite(arrow-right);
+    }
+
+    .owl-next {
+        left: -95px;
+        @include my-sprite(arrow-left);
+    }
+}
+
+.sliderMain__item {
+    position: relative;
+    background: url("../images/bg_slider_top.jpg") no-repeat;
+    background-size: contain;
+    padding-top: 16px;
+    height: 375px;
+
+    &:hover {
+        .sliderMain__contentHover {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.sliderMain__logo { cursor: pointer; }
+.sliderMain__list { display: none; }
+
+/* sliderMain__contentHover */
+.sliderMain__contentHover {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #959595;
+    z-index: 10;
+    padding: 30px 60px;
+    transition: all 0.2s ease;
+}
+
+.sliderMain__content {
+    text-align: center;
+
+    h3 {
+        font-size: 30px;
+        color: #ffffff;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+
+        &:after {
+            display: block;
+            width: 180px;
+            margin: 15px auto 0;
+            height: 1px;
+            background: #fff;
+            content: "";
+        }
+    }
+
+    p {
+        font-size: 16px;
+        font-weight: 200;
+        color: #ffffff;
+        line-height: 20px;
+        margin-top: 25px;
+    }
+}
+
+.sliderMain__iconItem {
+    margin-top: 35px;
+
+    a {
+        display: inline-block;
+        vertical-align: top;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        margin-left: 25px;
+
+        &:first-child { margin-left: 0; }
+    }
+
+    i {
+        position: relative;
+        vertical-align: top;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
