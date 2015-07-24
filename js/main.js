@@ -46,12 +46,15 @@ Constructor.prototype.isSectionTitle = function() {
         in: {
             effect: "slideInUp",
             shuffle: true
-        },
-        out: {
-            effect: 'slideOutUp',
-            delayScale: 0,
-            delay: 0,
-            shuffle: false
+        }
+    });
+
+    $('.title_sub_js').textillate({
+        autoStart: false,
+        minDisplayTime: 500,
+        in: {
+            effect: "slideInUp",
+            shuffle: true
         }
     });
 };
@@ -75,6 +78,7 @@ Constructor.prototype.getScrollPage = function() {
         afterMove: function(index) {
             var title = $('.section.container[data-index="' + index + '"]');
             title.find('.title_js').textillate('start');
+            title.find('.title_sub_js').textillate('start');
         },
         loop: true,
         keyboard: true,
