@@ -1,0 +1,43 @@
+.sectionTwo {
+    background: #27242d;
+}
+
+.STlist {
+    display: block;
+    margin-top: 60px;
+    @include clearfix();
+}
+
+.STlist__item {
+    padding-left: 55px;
+    padding-right: 55px;
+    height: 100px;
+}
+
+.STlist__title {
+    position: relative;
+}
+
+.STlist__number {
+    position: absolute;
+    right: 102%;
+    top: -8px;
+    font-weight: 100;
+    font-size: 100px;
+    color: #ffffff;
+}
+
+.STlist__main {
+    font-size: 36px;
+    font-weight: 100;
+    line-height: 30px;
+    color: #8c8a8f;
+    span { color: #ffffff; }
+}
+
+.STlist__description {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 30px;
+    color: #ffffff;
+}

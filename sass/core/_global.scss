@@ -19,10 +19,48 @@ html, body, .main, .main__inner {
     z-index: 10;
 }
 
+.wrapper {
+    width: 900px;
+    margin: 0 auto;
+}
+
 .containers-wrap, .window {
     position: absolute!important;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
+}
+
+/* flex */
+.flex { display: flex; }
+.flex__centered { margin: auto; }
+
+// ===============
+// input block
+// ===============
+.group {
+    @include clearfix();
+    margin-top: 25px;
+
+    .coll-1 { width: 8.333333333333334%!important; }
+    .coll-2 { width: 16.666666666666668%!important; }
+    .coll-3 { width: 25%!important; }
+    .coll-4 { width: 33.333333333333336%!important; }
+    .coll-5 { width: 41.66666666666667%!important; }
+    .coll-6 { width: 50%!important; }
+    .coll-7 { width: 58.333333333333336%!important; }
+    .coll-8 { width: 66.66666666666667%!important; }
+    .coll-9 { width: 75%!important; }
+    .coll-10 { width: 83.33333333333334%!important; }
+    .coll-11 { width: 91.66666666666667%!important; }
+    .coll-12 { width: 100%!important; }
+}
+
+.form-field {
+    float: left;
+    box-sizing: border-box;
+
+    &:last-of-type { padding-right: 0!important; }
+    &:first-of-type { padding-left: 0!important; }
 }

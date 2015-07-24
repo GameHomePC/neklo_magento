@@ -10,3 +10,31 @@
     overflow: hidden;
     min-width: 310px;
 }
+
+.container-title {
+    text-align: center;
+}
+
+.container-title-main {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
+
+    &:after {
+        display: block;
+        width: 180px;
+        margin: 15px auto 0;
+        height: 1px;
+        background: #fff;
+        content: "";
+    }
+}
+
+.container-title-sub {
+    font-size: 18px;
+    font-weight: 200;
+    color: #ffffff;
+    margin-top: 12px;
+}

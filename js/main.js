@@ -10,9 +10,15 @@ function Constructor(config) {
 // init
 //===============
 Constructor.prototype.init = function() {
+    var _this = this;
+
     this.getNavigation();
-    this.isSectionActive();
+    this.isSectionTitle();
     this.getScrollPage();
+
+    $(window).on('scroll', function() {
+        _this.isSectionActive();
+    });
 };
 
 //===============
@@ -33,28 +39,21 @@ Constructor.prototype.getNavigation = function() {
 //=================
 // isSectionActive
 //=================
-Constructor.prototype.isSectionActive = function() {
-    var titleFunc = function(_this) {
-        _this.section.each(function() {
-            var self = $(this);
-
-            if(self.hasClass('active')) {
-                self.find('.title_js').textillate({
-                    autoStart: true,
-                    "in": {
-                        effect: "rollIn",
-                        shuffle: true
-                    }
-                });
-            }
-        });
-    };
-
-    titleFunc(this);
-    //$(window).on('scroll', function() {
-    //    titleFunc(_this);
-    //});
-
+Constructor.prototype.isSectionTitle = function() {
+    $('.title_js').textillate({
+        autoStart: false,
+        minDisplayTime: 500,
+        in: {
+            effect: "slideInUp",
+            shuffle: true
+        },
+        out: {
+            effect: 'slideOutUp',
+            delayScale: 0,
+            delay: 0,
+            shuffle: false
+        }
+    });
 };
 
 //=================
@@ -66,17 +65,18 @@ Constructor.prototype.getScrollPage = function() {
     this.containersWrap.onepage_scroll({
         sectionContainer: "section.container",
         easing: "ease",
-        animationTime: 1e3,
+        animationTime: 1000,
         pagination: true,
-        updateURL: true,
+        updateURL: false,
         responsiveFallback: false,
-        beforeMove: function(a) {
-
+        beforeMove: function(index) {
+            $('.title_js').textillate('out');
         },
-        afterMove: function(a) {
-
+        afterMove: function(index) {
+            var title = $('.section.container[data-index="' + index + '"]');
+            title.find('.title_js').textillate('start');
         },
-        loop: false,
+        loop: true,
         keyboard: true,
         direction: "vertical"
     })
@@ -90,7 +90,7 @@ $(function() {
         body: 'body',
         navigationButtom: '.menuButton',
         container: '.container',
-        section: 'section',
+        section: 'section.container',
         containersWrap: '.containers-wrap'
     });
 
