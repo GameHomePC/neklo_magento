@@ -1,0 +1,59 @@
+.sectionMain {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.sectionMain__content {
+    margin-top: 55px;
+}
+
+.sectionMain__content_right {
+    text-align: right;
+}
+
+.sectionMain__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 55%;
+    text-align: left;
+}
+
+.sectionMain__title {
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.sectionMain__description {
+    color: #ffffff;
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 25px;
+}
+
+.sectionMain__description_black {
+    color: #150500;
+}
+
+.btn {
+    display: inline-block;
+    height: 53px;
+    line-height: 53px;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    margin-top: 25px;
+    padding: 0 60px;
+    cursor: pointer;
+}
+
+.btn-images {
+    display: inline-block;
+    margin-top: 25px;
+}

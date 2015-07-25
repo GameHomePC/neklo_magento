@@ -15,17 +15,30 @@
     text-align: center;
 }
 
+.container-title_black {
+    .container-title-main {
+        &:after {
+            background: #150500;
+        }
+    }
+
+    .container-title-sub {
+        color: #150500;
+    }
+}
+
 .container-title-main {
     font-size: 45px;
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
+    letter-spacing: -0.5px;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 
     &:after {
         display: block;
         width: 180px;
-        margin: 15px auto 0;
+        margin: 9px auto 0;
         height: 1px;
         background: #fff;
         content: "";
@@ -34,7 +47,7 @@
 
 .container-title-sub {
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
     color: #ffffff;
     margin-top: 12px;
 }

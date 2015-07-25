@@ -8,6 +8,10 @@ function Constructor(config) {
     this.menuNavList = $(config.menuNavList);
     this.sliderMain = $(config.sliderMain);
     this.sliderSee = $(config.sliderSee);
+    this.sliderMainItem = $(config.sliderMainItem);
+    this.jsOpenMore = $(config.jsOpenMore);
+    this.jsSliderClose = $(config.jsSliderClose);
+    this.jsContentHover = $(config.jsContentHover);
 }
 
 //===============
@@ -21,6 +25,54 @@ Constructor.prototype.init = function() {
     this.getScrollPage();
     this.getMenuNavScroll();
     this.getSliderMain();
+    this.getSliderMainClick();
+};
+
+//===============
+// getSliderMainClick
+//===============
+Constructor.prototype.getSliderMainClick = function() {
+    var _this = this,
+        jsOpenMore = this.jsOpenMore;
+
+    this.resetClass = function() {
+        jsOpenMore.parents('.sliderContentMain').removeClass('openImagesList');
+        jsOpenMore.removeClass('openItem');
+    };
+
+    jsOpenMore.find('.sliderSee').on('click', function(e) {
+        e.stopPropagation();
+
+        var self = $(this),
+            selfMainContent = self.parents('.sliderContentMain'),
+            selfItem = self.parents('.js-open-more'),
+            b = jsOpenMore;
+
+        selfMainContent.addClass('openImagesList');
+        selfItem.addClass('openItem');
+
+        jsOpenMore.on({
+            mouseenter: function() {
+                $("body").addClass("disabled-onepage-scroll");
+                return b.bind("mousewheel DOMMouseScroll MozMousePixelScroll", function(a) {
+                    return a.stopPropagation()
+                })
+            },
+            mouseleave: function() {
+                $("body").removeClass("disabled-onepage-scroll");
+                return b.unbind("mousewheel DOMMouseScroll MozMousePixelScroll")
+            }
+        }).trigger("mouseenter");
+
+        return selfItem.one("click", function() {
+            return selfItem.toggleClass("openItem")
+        })
+    });
+
+    this.jsSliderClose.on('click', function() {
+        jsOpenMore.parents('.sliderContentMain').removeClass('openImagesList');
+        jsOpenMore.removeClass('openItem');
+    });
 };
 
 //===============
@@ -29,29 +81,22 @@ Constructor.prototype.init = function() {
 Constructor.prototype.getSliderMain = function() {
     var _this = this;
 
-    this.sliderMain.owlCarousel2({
-        items: 1,
-        autoplay: false,
-        nav: true,
-        navText: ['',''],
-        autoplayTimeout: 5000,
-        autoplayHoverPause: false,
-        mouseDrag: false,
-        touchDrag: false,
-        navSpeed: 2000,
-        autoplaySpeed: 2000,
-        loop: true,
-        animateOut: 'fadeOut'
+    this.sliderMain.bxSlider({
+        auto: false,
+        autoControls: false,
+        pause: 5e3,
+        slideMargin: 0,
+        nextText: "",
+        prevText: "",
+        pager: false,
+        infiniteLoop: true,
+        onSlideNext: function() {
+            _this.resetClass();
+        },
+        onSlidePrev: function() {
+            _this.resetClass();
+        }
     });
-
-    this.sliderSee.on('click', function() {
-        $('.sliderMain__contentHover').hide();
-        $('.sliderMain__logo').hide();
-
-        $('.sliderMain__list').show();
-
-        return false;
-    })
 };
 
 //===============
@@ -97,7 +142,7 @@ Constructor.prototype.isSectionTitle = function() {
     $('.title_js').textillate({
         autoStart: false,
         minDisplayTime: 500,
-        initialDelay: 0,
+        initialDelay: 300,
         in: {
             effect: "slideInUp",
             shuffle: true,
@@ -115,7 +160,7 @@ Constructor.prototype.isSectionTitle = function() {
     $('.title_sub_js').textillate({
         autoStart: false,
         minDisplayTime: 500,
-        initialDelay: 200,
+        initialDelay: 400,
         in: {
             effect: "slideInDown",
             shuffle: true,
@@ -142,7 +187,7 @@ Constructor.prototype.getScrollPage = function() {
         easing: "ease",
         animationTime: 1000,
         pagination: true,
-        paginationArray: ['Home', 'Why us?', 'Portfolio'],
+        paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
         updateURL: false,
         responsiveFallback: false,
         beforeMove: function(index) {
@@ -189,7 +234,11 @@ $(function() {
         sectionOneIconBottom: '.sectionOne__iconBottom',
         menuNavList: '#menuNavList',
         sliderMain: '#sliderMain',
-        sliderSee: '#sliderSee'
+        sliderSee: '.sliderSee',
+        sliderMainItem: '.sliderMain__item',
+        jsOpenMore: '.js-open-more',
+        jsSliderClose: '.js_slider_close',
+        jsContentHover: '.js-contentHover'
     });
 
     constructor.init();

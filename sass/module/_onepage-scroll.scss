@@ -30,14 +30,16 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
     position: absolute;
-    right: 60px;
+    right: 59px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 20;
+    transition: all 0.4s ease;
 
     span {
         display: inline-block;
         font-size: 14px;
+        font-weight: 100;
         text-transform: uppercase;
         color: #888888;
         opacity: 0;
@@ -52,7 +54,7 @@ body, .onepage-wrapper, html {
     a {
         display: block;
         text-align: right;
-        padding: 6px 18px 6px 0;
+        padding: 3px 17px 3px 0;
 
         &:before {
             position: absolute;
@@ -72,34 +74,4 @@ body, .onepage-wrapper, html {
             span { opacity: 1; }
         }
     }
-}
-
-.onepage-pagination li a.active:before{
-
-}
-
-.disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
-    overflow: auto;
-}
-
-.disabled-onepage-scroll .onepage-wrapper .section {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-}
-.disabled-onepage-scroll .onepage-wrapper {
-    -webkit-transform: none !important;
-    -moz-transform: none !important;
-    transform: none !important;
-    -ms-transform: none !important;
-    min-height: 100%;
-}
-
-
-.disabled-onepage-scroll .onepage-pagination {
-    display: none;
-}
-
-body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
-    position: inherit;
 }
