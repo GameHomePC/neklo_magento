@@ -54,24 +54,44 @@ body, .onepage-wrapper, html {
     a {
         display: block;
         text-align: right;
-        padding: 3px 17px 3px 0;
+        padding: 3px 23px 3px 0;
+
+        &.active {
+            span { opacity: 1; }
+            i { border-color: #888888; }
+        }
+
+        &:hover {
+            span { opacity: 1; }
+            i { border-color: #888888; }
+        }
+    }
+
+    i {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        box-sizing: border-box;
+        transition: all 0.1s ease;
 
         &:before {
             position: absolute;
             right: 0;
             top: 0;
             bottom: 0;
+            left: 0;
             margin: auto;
             width: 4px;
             height: 4px;
             border-radius: 50%;
             background: #888888;
-            transition: all 0.1s ease;
             content: '';
-        }
-
-        &.active {
-            span { opacity: 1; }
         }
     }
 }

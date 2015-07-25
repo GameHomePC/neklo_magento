@@ -1,0 +1,40 @@
+.contactsForm {
+    .group {
+        margin-top: 10px;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.contacts__item {
+    padding-left: 11px;
+    padding-right: 11px;
+}
+
+.contacts {
+    .sectionMain__description {
+        margin-top: 0;
+    }
+}
+
+.contacts__iconItem {
+    margin-top: 25px;
+    @include clearfix();
+    a {
+        float: left;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #fff;
+        box-sizing: border-box;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
