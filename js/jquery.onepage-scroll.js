@@ -288,7 +288,6 @@
                 top: topPos + "%"
             }).addClass("section").attr("data-index", i+1);
 
-
             $(this).css({
                 position: "absolute",
                 left: ( settings.direction == 'horizontal' )
@@ -330,6 +329,25 @@
                 el.find(".onepage-pagination").css("margin-top", posTop);
             }
             $('ul.onepage-pagination').html(paginationList);
+
+            $('ul.onepage-pagination').find('li').on({
+                mouseover: function() {
+                    var self = $(this);
+
+                    $('ul.onepage-pagination').find('li').removeClass('opacity0 opacity3 opacity6 opacity10');
+
+                    self.prev(1).addClass('opacity3');
+                    self.prev(0).addClass('opacity6');
+                    self.addClass('opacity10');
+                    self.next(0).addClass('opacity6');
+                    self.next(1).addClass('opacity3');
+
+                    console.log(self);
+                },
+                mouseout: function() {
+                    $('ul.onepage-pagination').find('li').removeClass('opacity0 opacity3 opacity6 opacity10');
+                }
+            })
         }
 
         if(window.location.hash != "" && window.location.hash != "#1") {

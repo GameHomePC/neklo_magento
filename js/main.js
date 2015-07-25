@@ -12,6 +12,7 @@ function Constructor(config) {
     this.jsOpenMore = $(config.jsOpenMore);
     this.jsSliderClose = $(config.jsSliderClose);
     this.jsContentHover = $(config.jsContentHover);
+    this.onepagePagination = $(config.onepagePagination);
 }
 
 //===============
@@ -238,7 +239,8 @@ $(function() {
         sliderMainItem: '.sliderMain__item',
         jsOpenMore: '.js-open-more',
         jsSliderClose: '.js_slider_close',
-        jsContentHover: '.js-contentHover'
+        jsContentHover: '.js-contentHover',
+        onepagePagination: '.onepage-pagination'
     });
 
     constructor.init();

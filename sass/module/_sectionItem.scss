@@ -24,6 +24,8 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
+    transition: all 1s ease;
+    opacity: 0;
 }
 
 .sectionMain__description {
@@ -31,8 +33,29 @@
     font-weight: 300;
     line-height: 20px;
     margin-top: 25px;
+    transition: all 1s ease;
+    opacity: 0;
 }
 
 .sectionMain__description_black {
     color: #150500;
+}
+
+/* sectionMain.active */
+.sectionMain.active {
+    .sectionMain__title {
+        opacity: 1;
+        animation-name: rollIn;
+        animation-duration: 0.5s;
+        animation-delay: 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    .sectionMain__description {
+        opacity: 1;
+        animation-name: zoomInLeft;
+        animation-duration: 0.5s;
+        animation-delay: 0.7s;
+        transition-delay: 0.7s;
+    }
 }

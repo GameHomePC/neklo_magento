@@ -11,9 +11,8 @@
 .STlist__item {
     padding-left: 55px;
     padding-right: 55px;
-    animation-duration: 1.5s;
-    animation-fill-mode: none;
-    animation-delay: .4s;
+    opacity: 0;
+    transition: all 1s ease;
 }
 
 .STlist__title {
@@ -47,6 +46,10 @@
 
 .sectionTwo.active {
     .STlist__item {
-        animation-name: flipInY;
+        opacity: 1;
+        animation-name: lightSpeedIn;
+        animation-duration: 1s;
+        animation-delay: 0.5s;
+        transition-delay: 0.5s;
     }
 }

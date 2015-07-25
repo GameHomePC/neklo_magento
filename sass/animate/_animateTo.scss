@@ -11,3 +11,17 @@
         transform: translate3d(0,0,0) scale(1) rotate(0deg);
     }
 }
+
+@keyframes scaleAnimate {
+    0% { transform: scale(0); }
+    15% { transform: scale(2); }
+    30% { transform: scale(1.5); }
+    50% { transform: scale(2); }
+    80% { transform: scale(1.5); }
+    100% { transform: scale(1.5); }
+}
+
+@keyframes scaleAnimate2 {
+    0% { transform: scale(1) translateX(0); }
+    100% { transform: scale(1.1) translateX(-10px); }
+}
