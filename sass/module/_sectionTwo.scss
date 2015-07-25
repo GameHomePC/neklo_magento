@@ -11,6 +11,9 @@
 .STlist__item {
     padding-left: 55px;
     padding-right: 55px;
+    animation-duration: 1.5s;
+    animation-fill-mode: none;
+    animation-delay: .4s;
 }
 
 .STlist__title {
@@ -39,4 +42,11 @@
     font-weight: 200;
     margin-top: 30px;
     color: #ffffff;
+}
+
+
+.sectionTwo.active {
+    .STlist__item {
+        animation-name: flipInY;
+    }
 }

@@ -2,21 +2,23 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+        <meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
         <title>Home page</title>
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <div class="menuNav">
-            <ul class="menuNav__list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Why us?</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Extensions</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Mobile App</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="#">Contact Us</a></li>
+            <ul class="menuNav__list" id="menuNavList">
+                <li><a href="#" data-id="1">Home</a></li>
+                <li><a href="#" data-id="2">Why us?</a></li>
+                <li><a href="#" data-id="3">Portfolio</a></li>
+                <li><a href="#" data-id="4">Extensions</a></li>
+                <li><a href="#" data-id="5">Development</a></li>
+                <li><a href="#" data-id="6">Events</a></li>
+                <li><a href="#" data-id="7">Mobile App</a></li>
+                <li><a href="#" data-id="8">Education</a></li>
+                <li><a href="#" data-id="9">Contact Us</a></li>
             </ul>
 
             <ul class="menuNav__listMin">
@@ -67,7 +69,7 @@
                                     <i class="sectionOne__logo"></i>
                                     <h1 class="sectionOne__title">
                                         <span class="sectionOne__tTop title_js">..Your best eCommerce experience on Magento </span>
-                                        <span class="sectionOne__tBottom title_js">with Neklo...</span>
+                                        <span class="sectionOne__tBottom title_sub_js">with Neklo...</span>
                                     </h1>
                                 </div>
                             </figure>
@@ -83,7 +85,7 @@
                             <div class="flex__centered">
                                 <header class="container-title">
                                     <h2 class="container-title-main title_js">Why us?</h2>
-                                    <p class="container-title-sub">What we’ve got in our backpack: some facts for you to know us better</p>
+                                    <p class="container-title-sub title_sub_js">What we’ve got in our backpack: some facts for you to know us better</p>
                                 </header>
 
                                 <div class="wrapper">
@@ -126,16 +128,358 @@
                         </div>
                     </section>
                 </section>
+
+                <!-- section-3 -->
+                <section class="container sectionThree js-container">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">OUR Portfolio</h2>
+                                    <p class="container-title-sub title_sub_js">Here we selected the best of our works for you. Take a look.</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <figure class="sliderContentMain">
+                                        <i class="sliderContentMain__close js_slider_close"></i>
+
+                                        <div class="sliderMain" id="sliderMain">
+                                            <article class="sliderMain__item js-open-more">
+                                                <div class="sliderMain__contentHover js-contentHover">
+                                                    <div class="sliderMain__content">
+                                                        <h3>poprageous.com</h3>
+                                                        <p>Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism. Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism.</p>
+                                                        <div class="sliderMain__iconItem">
+                                                            <a href="#"><i class="icon icon_1"></i></a>
+                                                            <a class="sliderSee" href="#"><i class="icon icon_2"></i></a>
+                                                        </div>
+                                                        <i class="openHoverIcon"></i>
+                                                    </div>
+                                                </div>
+                                                <img src="images/sliderMain/logo-1.jpg" alt="" class="sliderMain__logo">
+                                                <img src="images/sliderMain/list-1.jpg" alt="" class="sliderMain__list">
+                                            </article>
+
+                                            <article class="sliderMain__item js-open-more">
+                                                <div class="sliderMain__contentHover js-contentHover">
+                                                    <div class="sliderMain__content">
+                                                        <h3>shopplanetblue.com</h3>
+                                                        <p>Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism. Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism.</p>
+                                                        <div class="sliderMain__iconItem">
+                                                            <a href="#"><i class="icon icon_1"></i></a>
+                                                            <a class="sliderSee" href="#"><i class="icon icon_2"></i></a>
+                                                        </div>
+                                                        <i class="openHoverIcon"></i>
+                                                    </div>
+                                                </div>
+                                                <img src="images/sliderMain/logo-1.jpg" alt="" class="sliderMain__logo">
+                                                <img src="images/sliderMain/list-2.jpg" alt="" class="sliderMain__list">
+                                            </article>
+
+                                            <article class="sliderMain__item js-open-more">
+                                                <div class="sliderMain__contentHover js-contentHover">
+                                                    <div class="sliderMain__content">
+                                                        <h3>carbon38.com</h3>
+                                                        <p>Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism. Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism.</p>
+                                                        <div class="sliderMain__iconItem">
+                                                            <a href="#"><i class="icon icon_1"></i></a>
+                                                            <a class="sliderSee" href="#"><i class="icon icon_2"></i></a>
+                                                        </div>
+                                                        <i class="openHoverIcon"></i>
+                                                    </div>
+                                                </div>
+                                                <img src="images/sliderMain/logo-1.jpg" alt="" class="sliderMain__logo">
+                                                <img src="images/sliderMain/list-3.jpg" alt="" class="sliderMain__list">
+                                            </article>
+
+                                            <article class="sliderMain__item js-open-more">
+                                                <div class="sliderMain__contentHover js-contentHover">
+                                                    <div class="sliderMain__content">
+                                                        <h3>bungalowclothing.com</h3>
+                                                        <p>Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism. Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism.</p>
+                                                        <div class="sliderMain__iconItem">
+                                                            <a href="#"><i class="icon icon_1"></i></a>
+                                                            <a class="sliderSee" href="#"><i class="icon icon_2"></i></a>
+                                                        </div>
+                                                        <i class="openHoverIcon"></i>
+                                                    </div>
+                                                </div>
+                                                <img src="images/sliderMain/logo-1.jpg" alt="" class="sliderMain__logo">
+                                                <img src="images/sliderMain/list-4.jpg" alt="" class="sliderMain__list">
+                                            </article>
+
+                                            <article class="sliderMain__item js-open-more">
+                                                <div class="sliderMain__contentHover js-contentHover">
+                                                    <div class="sliderMain__content">
+                                                        <h3>luluandgeorgia.com</h3>
+                                                        <p>Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism. Modern online store selling clothing, accessories, bags, belts, shoes and jewelry with a unique, extremely flexible and democratic post-pay mechanism.</p>
+                                                        <div class="sliderMain__iconItem">
+                                                            <a href="#"><i class="icon icon_1"></i></a>
+                                                            <a class="sliderSee" href="#"><i class="icon icon_2"></i></a>
+                                                        </div>
+                                                        <i class="openHoverIcon"></i>
+                                                    </div>
+                                                </div>
+                                                <img src="images/sliderMain/logo-1.jpg" alt="" class="sliderMain__logo">
+                                                <img src="images/sliderMain/list-5.jpg" alt="" class="sliderMain__list">
+                                            </article>
+                                        </div>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-4 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_Extensions.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">extensions</h2>
+                                    <p class="container-title-sub title_sub_js">Ready Magento solutions  that work for you</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content">
+                                        <div class="sectionMain__item">
+                                            <h2 class="sectionMain__title">store.neklo.com</h2>
+                                            <p class="sectionMain__description">
+                                                Working on Magento all these years we’ve been examining both its strong and weak sides, searching ways to improve it and collecting ideas. Understanding the specific needs of eCommerce businesses, we crystallized what our clients need most and developed a series of Magento modules that make
+                                                <br>
+                                                daily routine easier for a store owner. What we offer you is pearls and diamonds of our experience.
+                                                <br>
+                                                Enjoy.
+                                            </p>
+
+                                            <a class="btn" href="#">Viev store</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-5 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_CustomDevelopment.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">Custom Development</h2>
+                                    <p class="container-title-sub title_sub_js">We bring your ideas to life</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content">
+                                        <div class="sectionMain__item">
+                                            <h2 class="sectionMain__title">
+                                                One team,<br>
+                                                multiple solutions
+                                            </h2>
+                                            <p class="sectionMain__description">
+                                                Magento architecture, integration, cloud migration, load balancing, front end, mobile development and a lot more – whatever Magento service is needed, we are here to provide you with exactly what you want for your business. Forget freelancers: we will make the store of your dreams a reality.
+                                            </p>
+
+                                            <a class="btn" href="#">Get the details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-6 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_Events.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">Events</h2>
+                                    <p class="container-title-sub title_sub_js">We are organizers of the leading eCommerce Conference for Magento</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content">
+                                        <div class="sectionMain__item">
+                                            <h2 class="sectionMain__title">
+                                                MEET MAGENTO CZ
+                                            </h2>
+                                            <p class="sectionMain__description">
+                                                Being active members of the Magento community, we regularly take part in Meet Magento events both as Sponsors and Speakers. This time we decided to take our involvement to a new, unprecedented level, and to organize a Conference on our own. And now we are happy to announce that in 2016, for the first time ever, Meet Magento will take place in Prague, the Czech Republic!
+                                                <br><br>
+                                                We heartily invite you to join us at the First Meet Magento CZ and to explore the bright side of<br>
+                                                Magento!
+                                            </p>
+
+                                            <a class="btn" href="#">About the conference</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-7 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_Mobile.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title container-title_black">
+                                    <h2 class="container-title-main title_js">Mobile app</h2>
+                                    <p class="container-title-sub title_sub_js">Handy solution for store owners</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content sectionMain__content_right">
+                                        <div class="sectionMain__item">
+                                            <h2 class="sectionMain__title">
+                                                Manage your store<br>
+                                                on-the-go
+                                            </h2>
+                                            <p class="sectionMain__description sectionMain__description_black">
+                                                Have you ever thought of how awesome it would be to manage your store from a smartphone or a tablet? Well, lucky you are because we did! We created an app for you that combines all the features needed for running your store successfully wherever you are. Managing sales, purchases and client
+                                                <br>
+                                                operations – with our multi-featured app you are in total control of your business. Perfect both for iPhone and iPad.
+                                            </p>
+
+                                            <a class="btn-images" href="#">
+                                                <img src="images/button-app-store.jpg" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-8 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_Uducation.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">Education</h2>
+                                    <p class="container-title-sub title_sub_js">Welcome to the First School for Magento in Prague</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content">
+                                        <div class="sectionMain__item">
+                                            <h2 class="sectionMain__title">
+                                                Explore the world<br>
+                                                of Magento with NEKLO
+                                            </h2>
+                                            <p class="sectionMain__description">
+                                                Offering brilliant career opportunities worldwide, Magento is your personal chance to go far beyond of what you have to a more prosperous and exciting future. What you need now is a tactful guidance of those who already made their way in Magento development. And that is the reason we opened our school for Magento, ready to assist you.
+                                                <br>
+                                                Whether you are making your first steps with Magento or wanting to validate your skills, we will be happy to see you among our students.
+                                                <br><br>
+                                                Nowadays there are two courses available to you:<br>
+                                                - Basic: Starting with Magento<br>
+                                                - Advanced: Going Deep into Magento. Certification Preparation
+                                                <br><br>
+                                                Class schedule will be announced soon.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <!-- section-9 -->
+                <section class="container sectionMain js-container" style="background-image: url('images/BG/Bg_Contacts.jpg')">
+                    <section class="main">
+                        <div class="main__inner flex">
+                            <div class="flex__centered">
+                                <header class="container-title">
+                                    <h2 class="container-title-main title_js">Contact us</h2>
+                                    <p class="container-title-sub title_sub_js">Got a question? Don’t be shy! Let’s talk!</p>
+                                </header>
+
+                                <div class="wrapper">
+                                    <div class="sectionMain__content">
+                                        <h2 class="sectionMain__title tc">
+                                            Always here to answer you
+                                        </h2>
+
+                                        <div class="contacts">
+                                            <div class="group">
+                                                <div class="contacts__item form-field coll-6">
+                                                    <form class="contactsForm">
+                                                        <div class="group">
+                                                            <fieldset class="fieldset form-field coll-6">
+                                                                <input type="text" name="name" class="form-input" placeholder="Your name">
+                                                            </fieldset>
+                                                            <fieldset class="fieldset form-field coll-6">
+                                                                <input type="text" name="email" class="form-input" placeholder="Your email">
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="group">
+                                                            <fieldset class="fieldset form-field coll-12">
+                                                                <textarea class="form-textarea" name="message" placeholder="Your message"></textarea>
+                                                            </fieldset>
+                                                        </div>
+
+                                                        <div class="group">
+                                                            <fieldset class="fieldset form-field coll-12">
+                                                                <button class="btn btn-white">Send</button>
+                                                            </fieldset>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="contacts__item form-field coll-6">
+                                                    <p class="sectionMain__description">
+                                                        If you want to know more about us, our products and services or would like to get more information on joining our School for Magento, please, do not hesitate to contact us.
+                                                        <br><br>
+                                                        Phone: +375 33 1234567
+                                                        <br>
+                                                        E-mail: info@neklo.com
+                                                    </p>
+
+                                                    <div class="contacts__iconItem">
+                                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
             </div>
         </div>
 
         <script src="js/jquery-1.11.3.min.js"></script>
+
+        <!-- slider -->
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/owl.carousel2.js"></script>
+        <script src="js/jquery.bxslider.js"></script>
+
+        <!-- validate -->
         <script src="js/jquery.validate.min.js"></script>
+
+        <!-- animate -->
         <script src="js/jquery.lettering.js"></script>
         <script src="js/jquery.textillate.js"></script>
         <script src="js/jquery.onepage-scroll.js"></script>
+
+        <!-- scroll pane -->
+        <script src="js/jquery.mousewheel.js"></script>
+        <script src="js/mwheelIntent.js"></script>
+        <script src="js/jquery.jscrollpane.min.js"></script>
         <script src="js/main.js"></script>
     </body>
 </html>
