@@ -1,31 +1,13 @@
-body, html {
-    margin: 0;
+html.no-touch, .no-touch body {
     overflow: hidden;
-    -webkit-transition: opacity 400ms;
-    -moz-transition: opacity 400ms;
-    transition: opacity 400ms;
 }
 
-body, .onepage-wrapper, html {
-    display: block;
-    position: static;
-    padding: 0;
-    width: 100%;
+.containers-wrap, .window {
+    position: absolute!important;
+    top: 0;
+    left: 0;
     height: 100%;
-}
-
-.onepage-wrapper {
     width: 100%;
-    height: 100%;
-    display: block;
-    position: relative;
-    padding: 0;
-    -webkit-transform-style: preserve-3d;
-}
-
-.onepage-wrapper .section {
-    width: 100%;
-    height: 100%;
 }
 
 .onepage-pagination {

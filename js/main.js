@@ -175,6 +175,11 @@ Constructor.prototype.isSectionTitle = function() {
             shuffle: false
         }
     });
+
+    if(Modernizr.touch) {
+       $('.title_js').textillate('start');
+       $('.title_sub_js').textillate('start');
+    }
 };
 
 //=================
@@ -182,44 +187,64 @@ Constructor.prototype.isSectionTitle = function() {
 //=================
 Constructor.prototype.getScrollPage = function() {
     var _this = this;
+    if(!Modernizr.touch) {
+        this.containersWrap.onepage_scroll({
+            sectionContainer: "section.container",
+            easing: "ease",
+            animationTime: 1000,
+            pagination: true,
+            paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
+            updateURL: false,
+            responsiveFallback: false,
+            beforeMove: function(index) {
+                var title = $('.section.container[data-index="' + index + '"]');
+                title.find('.title_js').textillate('start');
+                title.find('.title_sub_js').textillate('start');
 
-    this.containersWrap.onepage_scroll({
-        sectionContainer: "section.container",
-        easing: "ease",
-        animationTime: 1000,
-        pagination: true,
-        paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
-        updateURL: false,
-        responsiveFallback: false,
-        beforeMove: function(index) {
-            var title = $('.section.container[data-index="' + index + '"]');
-            title.find('.title_js').textillate('start');
-            title.find('.title_sub_js').textillate('start');
+                if(index !== 1) {
+                    _this.body.addClass('activeColorMenu');
+                } else {
+                    _this.body.removeClass('activeColorMenu');
+                }
+            },
+            afterMove: function(index) {
 
-            if(index !== 1) {
-                _this.body.addClass('activeColorMenu');
-            } else {
-                _this.body.removeClass('activeColorMenu');
-            }
-        },
-        afterMove: function(index) {
-
-        },
-        loop: true,
-        keyboard: true,
-        direction: "vertical"
-    });
+            },
+            loop: true,
+            keyboard: true,
+            direction: "vertical"
+        });
+    }
 
     this.sectionOneIconBottom.on('click', function() {
-        _this.containersWrap.moveTo(2);
+        if(!Modernizr.touch) {
+            _this.containersWrap.moveTo(2);
+        } else {
+            _this.getScrollPageTouch(2);
+        }
     })
 };
 
 //=================
 // getScrollPage
 //=================
+Constructor.prototype.getScrollPageTouch = function(index) {
+    var sectionElement = $('#' + index).offset().top;
+    if($(window).scrollTop() == sectionElement) return false;
+    $('html, body').stop().animate({
+        scrollTop: sectionElement
+    }, 1000);
+};
+
+//=================
+// getScrollPage
+//=================
 Constructor.prototype.getScrollPageClick = function(index) {
-    this.containersWrap.moveTo(index);
+    if(!Modernizr.touch) {
+        this.containersWrap.moveTo(index);
+    } else {
+        this.getScrollPageTouch(index);
+    }
 };
 
 //===============
