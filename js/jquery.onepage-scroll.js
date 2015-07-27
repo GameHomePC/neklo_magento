@@ -341,8 +341,6 @@
                     self.addClass('opacity10');
                     self.next(0).addClass('opacity6');
                     self.next(1).addClass('opacity3');
-
-                    console.log(self);
                 },
                 mouseout: function() {
                     $('ul.onepage-pagination').find('li').removeClass('opacity0 opacity3 opacity6 opacity10');

@@ -13,6 +13,7 @@ function Constructor(config) {
     this.jsSliderClose = $(config.jsSliderClose);
     this.jsContentHover = $(config.jsContentHover);
     this.onepagePagination = $(config.onepagePagination);
+    this.contactsForm = $(config.contactsForm);
 }
 
 //===============
@@ -27,6 +28,8 @@ Constructor.prototype.init = function() {
     this.getMenuNavScroll();
     this.getSliderMain();
     this.getSliderMainClick();
+    this.getContactForm();
+    this.getPopup();
 };
 
 //===============
@@ -137,7 +140,7 @@ Constructor.prototype.getNavigation = function() {
 };
 
 //=================
-// isSectionActive
+// isSectionTitle
 //=================
 Constructor.prototype.isSectionTitle = function() {
     $('.title_js').textillate({
@@ -210,7 +213,7 @@ Constructor.prototype.getScrollPage = function() {
             afterMove: function(index) {
 
             },
-            loop: true,
+            loop: false,
             keyboard: true,
             direction: "vertical"
         });
@@ -226,7 +229,7 @@ Constructor.prototype.getScrollPage = function() {
 };
 
 //=================
-// getScrollPage
+// getScrollPageTouch
 //=================
 Constructor.prototype.getScrollPageTouch = function(index) {
     var sectionElement = $('#' + index).offset().top;
@@ -237,7 +240,7 @@ Constructor.prototype.getScrollPageTouch = function(index) {
 };
 
 //=================
-// getScrollPage
+// getScrollPageClick
 //=================
 Constructor.prototype.getScrollPageClick = function(index) {
     if(!Modernizr.touch) {
@@ -245,6 +248,91 @@ Constructor.prototype.getScrollPageClick = function(index) {
     } else {
         this.getScrollPageTouch(index);
     }
+};
+
+//=================
+// getPopup
+//=================
+Constructor.prototype.getPopup = function() {
+    var _this = this;
+    this.popup = $('.popup');
+    this.popupTitle = $('.popup h2');
+    this.popupDescription = $('.popup p');
+    this.popupClose = $('.popup__close');
+    this.popupOver = $('.popup__over');
+
+    this.hidePopup = function() {
+        _this.popup.fadeOut(300);
+        _this.popupOver.fadeOut(300);
+    };
+
+    this.showPopup = function() {
+        _this.popup.fadeIn(300);
+        _this.popupOver.fadeIn(300);
+    };
+
+    this.getClickHide = function(elements) {
+        elements.on('click', function() {
+            _this.hidePopup();
+
+            return false;
+        });
+    };
+
+    this.getClickShow = function(elements) {
+        elements.on('click', function(e) {
+            _this.showPopup();
+
+            return false;
+        });
+    };
+
+    this.getShowSend = function(title, description) {
+        _this.popupTitle.text(title);
+        _this.popupDescription.text(description);
+        _this.showPopup();
+    };
+
+    this.getClickHide(this.popupClose);
+    this.getClickHide(this.popupOver);
+};
+
+//=================
+// getContactForm
+//=================
+Constructor.prototype.getContactForm = function() {
+    var _this = this;
+
+    this.contactsForm.validate({
+        rules: {
+            name: "required",
+            email: {
+                required: true,
+                email: true
+            },
+            message: "required"
+        },
+        messages: {
+            name: "Please enter your name",
+            email: "Please enter a valid email address",
+            message: "Please enter your message"
+        },
+        submitHandler: function(form) {
+            var name = form.name.value,
+                email = form.email.value,
+                message = form.message.value;
+
+            $.ajax({
+                method: "POST",
+                url: "send.php",
+                data: { name: name, email: email, message: message },
+                dataType: 'json',
+                success: function(e) {
+                    _this.getShowSend(e.title, e.message);
+                }
+            })
+        }
+    });
 };
 
 //===============
@@ -265,7 +353,8 @@ $(function() {
         jsOpenMore: '.js-open-more',
         jsSliderClose: '.js_slider_close',
         jsContentHover: '.js-contentHover',
-        onepagePagination: '.onepage-pagination'
+        onepagePagination: '.onepage-pagination',
+        contactsForm: '.contactsForm'
     });
 
     constructor.init();

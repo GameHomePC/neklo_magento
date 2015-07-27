@@ -71,3 +71,11 @@ input, textarea {
     display: inline-block;
     margin-top: 25px;
 }
+
+/* label */
+label.error {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 5px;
+}

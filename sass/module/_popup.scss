@@ -1,0 +1,73 @@
+.popup__over {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #000;
+    opacity: 0.3;
+    z-index: 200;
+}
+
+.popup {
+    position: fixed;
+    display: none;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    z-index: 210;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.5);
+
+    @include breakpointmedia(768, 'max-width') {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpointmedia(768, 'max-width') {
+            font-size: 20px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 20px;
+
+        @include breakpointmedia(768, 'max-width') {
+            font-size: 14px;
+            text-align: inherit;
+        }
+    }
+}
+
+.popup__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 18px;
+    background: #fff;
+    width: 28px;
+    height: 28px;
+    text-align: center;
+    cursor: pointer;
+
+    i {
+        display: block;
+        vertical-align: top;
+        line-height: 28px;
+    }
+}

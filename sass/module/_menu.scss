@@ -8,7 +8,8 @@
     padding: 19px 21px;
     user-select: none;
     cursor: pointer;
-    z-index: 10;
+    z-index: 15;
+    transition: all 400ms ease;
 }
 
 .menuButton__item {
@@ -117,7 +118,7 @@
 
 $columnsNav: 10;
 body.active_nav {
-    .window {
+    .containers-wrap, .menuButton {
         margin-left: 360px;
     }
 

@@ -19,18 +19,35 @@
         margin: auto;
         transition: all 1s ease;
         transition-delay: 1000ms;
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-sizing: border-box;
     }
 
     .bx-prev {
-        right: -95px;
+        right: -120px;
         transform: translateX(500px);
-        @include my-sprite(arrow-right);
+        text-align: center;
+        &:before {
+            display: inline-block;
+            margin-top: 14px;
+            @include my-sprite(arrow-right);
+            content: "";
+        }
     }
 
     .bx-next {
-        left: -95px;
+        left: -120px;
         transform: translateX(-500px);
-        @include my-sprite(arrow-left);
+        text-align: center;
+        &:before {
+            display: inline-block;
+            margin-top: 14px;
+            @include my-sprite(arrow-left);
+            content: "";
+        }
     }
 }
 
