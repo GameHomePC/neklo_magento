@@ -10,6 +10,16 @@
 .contacts__item {
     padding-left: 11px;
     padding-right: 11px;
+
+    @include breakpointmedia(768, 'max-width') {
+        padding-left: 0;
+        padding-right: 0;
+        display: block;
+        width: 100%!important;
+        margin-top: 20px;
+
+        &:first-child { margin-top: 0; }
+    }
 }
 
 .contacts {
@@ -21,6 +31,7 @@
 .contacts__iconItem {
     margin-top: 19px;
     @include clearfix();
+
     a {
         float: left;
         width: 40px;

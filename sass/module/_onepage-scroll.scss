@@ -2,14 +2,23 @@ html.no-touch, .no-touch body {
     overflow: hidden;
 }
 
+.no-touch {
+    header { transition: all 1s ease; }
+}
+
 .containers-wrap {
+    background: #fff;
     position: absolute!important;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 10;
-    transition-duration: 400ms!important;
+
+    @include breakpointmedia(768, 'max-width') {
+        height: auto;
+        box-sizing: border-box;
+    }
 }
 
 .window {

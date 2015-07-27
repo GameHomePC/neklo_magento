@@ -3,8 +3,12 @@
     background-size: cover;
 
     .wrapper {
-        width: 480px;
+        max-width: 480px;
         margin-top: 40px;
+
+        @include breakpointmedia(768, 'max-width') {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -58,6 +62,12 @@
     height: 360px;
     transition: all 0.2s ease;
 
+    @include breakpointmedia(768, 'max-width') {
+        background: none;
+        padding-top: 0;
+        height: auto;
+    }
+
     &:hover {
         .sliderMain__contentHover {
             visibility: visible;
@@ -89,6 +99,12 @@
     padding: 28px 60px;
     box-sizing: border-box;
     transition: all 0.2s ease;
+    z-index: 10;
+
+    @include breakpointmedia(768, 'max-width') {
+        top: 0;
+        padding: 10px 10px;
+    }
 }
 
 .sliderMain__content {
@@ -100,10 +116,14 @@
         text-transform: uppercase;
         text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 
+        @include breakpointmedia(768, 'max-width') {
+            font-size: 20px;
+        }
+
         &:after {
             display: block;
             width: 180px;
-            margin: 15px auto 0;
+            margin: 5px auto 0;
             height: 1px;
             background: #fff;
             content: "";
@@ -116,13 +136,23 @@
         color: #ffffff;
         line-height: 20px;
         margin-top: 25px;
+
+        @include breakpointmedia(768, 'max-width') {
+            font-size: 14px;
+            margin-top: 10px;
+            line-height: 15px;
+        }
     }
 }
 
 .sliderMain__iconItem {
     margin-top: 35px;
 
-    a {
+    @include breakpointmedia(768, 'max-width') {
+        margin-top: 8px;
+    }
+
+    a, span {
         display: inline-block;
         vertical-align: top;
         width: 60px;
@@ -131,6 +161,13 @@
         border-radius: 50%;
         border: 1px solid #fff;
         margin-left: 25px;
+
+        @include breakpointmedia(768, 'max-width') {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin-left: 15px;
+        }
 
         &:first-child { margin-left: 0; }
     }
@@ -154,6 +191,7 @@
     width: 55px;
     height: 55px;
     background: #959595;
+    z-index: -1;
 
     &:before {
         display: inline-block;
@@ -179,6 +217,10 @@
 
     .bx-viewport {
         height: 400px!important;
+
+        @include breakpointmedia(768, 'max-width') {
+            height: auto;
+        }
     }
 
     .openItem {

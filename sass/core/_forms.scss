@@ -42,6 +42,8 @@ input, textarea {
 
 
 .btn {
+    position: relative;
+    overflow: hidden;
     display: inline-block;
     height: 53px;
     line-height: 53px;
@@ -54,7 +56,46 @@ input, textarea {
     color: #fff;
     margin-top: 25px;
     padding: 0 60px;
+    transition: all 500ms ease;
     cursor: pointer;
+}
+
+.btn-animate {
+
+    @include breakpointmedia(768, 'max-width') {
+        width: 100%;
+    }
+
+    span {
+        display: inline-block;
+        transition: all 500ms ease;
+    }
+
+    &:after {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        transition: all 500ms ease;
+        transform: translateX(30px);
+        @include my-sprite(arrow-button);
+        content: "";
+    }
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.1);
+
+        span { transform: translateX(-20px); }
+
+        &:after {
+            display: inline-block;
+            transition: all 500ms ease;
+            transform: translateX(-30px);
+            @include my-sprite(arrow-button);
+            content: "";
+        }
+    }
 }
 
 .btn-white {
@@ -70,6 +111,12 @@ input, textarea {
 .btn-images {
     display: inline-block;
     margin-top: 25px;
+
+    @include breakpointmedia(768, 'max-width') {
+        img {
+            width: 100px;
+        }
+    }
 }
 
 /* label */

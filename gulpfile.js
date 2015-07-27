@@ -50,7 +50,12 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "./"
         },
-        port: 9090
+        port: 1515,
+        ghostMode: {
+            clicks: true,
+            forms: true,
+            scroll: false
+        }
     });
 });
 

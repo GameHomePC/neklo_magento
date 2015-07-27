@@ -3,6 +3,9 @@
 //====================
 .sectionOne {
     background: #fff;
+    @include breakpointmedia(768, 'max-width') {
+        padding-top: 70px;
+    }
 }
 
 .sectionOne__figure {
@@ -35,10 +38,19 @@
     font-size: 40px;
     letter-spacing: -0.5px;
     margin-top: 40px;
+
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 20px;
+        margin-top: 18px;
+    }
 }
 
 .sectionOne__tBottom {
     font-size: 26px;
+
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 18px;
+    }
 }
 
 .sectionOne__leftIcon, .sectionOne__rightIcon {
@@ -46,6 +58,10 @@
     top: 26px;
     width: 350px;
     height: 180px;
+
+    @include breakpointmedia(768, 'max-width') {
+        display: none;
+    }
 
     i { position: absolute; }
 }
@@ -79,6 +95,17 @@
     border-radius: 50%;
     background: #27242d url("../images/sprite/arrowOne.png") center center no-repeat;
     cursor: pointer;
+
+    @include breakpointmedia(768, 'max-width') {
+        position: relative;
+        display: block;
+        bottom: 0;
+        margin-top: 20px;
+
+        &:before, &:after {
+            display: none;
+        }
+    }
 
     &:before {
         position: absolute;

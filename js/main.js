@@ -235,7 +235,7 @@ Constructor.prototype.getScrollPageTouch = function(index) {
     var sectionElement = $('#' + index).offset().top;
     if($(window).scrollTop() == sectionElement) return false;
     $('html, body').stop().animate({
-        scrollTop: sectionElement
+        scrollTop: (window.innerWidth <= 768) ? sectionElement - 48 : sectionElement
     }, 1000);
 };
 

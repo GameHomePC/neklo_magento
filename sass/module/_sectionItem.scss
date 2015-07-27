@@ -6,6 +6,10 @@
 
 .sectionMain__content {
     margin-top: 55px;
+
+    @include breakpointmedia(768, 'max-width') {
+        margin-top: 25px;
+    }
 }
 
 .sectionMain__content_right {
@@ -17,6 +21,10 @@
     vertical-align: top;
     width: 55%;
     text-align: left;
+
+    @include breakpointmedia(768, 'max-width') {
+        width: 100%;
+    }
 }
 
 .sectionMain__title {
@@ -26,6 +34,11 @@
     color: #ffffff;
     transition: all 1s ease;
     opacity: 0;
+
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 25px;
+        text-align: center;
+    }
 }
 
 .sectionMain__description {
@@ -35,6 +48,12 @@
     margin-top: 25px;
     transition: all 1s ease;
     opacity: 0;
+
+    @include breakpointmedia(768, 'max-width') {
+        margin-top: 10px;
+        font-size: 14px;
+        line-height: 17px;
+    }
 }
 
 .sectionMain__description_black {

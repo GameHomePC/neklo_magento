@@ -6,6 +6,10 @@
     display: block;
     margin-top: 60px;
     @include clearfix();
+
+    @include breakpointmedia(768, 'max-width') {
+        margin-top: 30px;
+    }
 }
 
 .STlist__item {
@@ -13,10 +17,24 @@
     padding-right: 55px;
     opacity: 0;
     transition: all 1s ease;
+
+    @include breakpointmedia(768, 'max-width') {
+        display: block;
+        width: 100%!important;
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 20px;
+
+        &:first-child { margin-top: 0; }
+    }
 }
 
 .STlist__title {
     position: relative;
+
+    @include breakpointmedia(768, 'max-width') {
+        text-align: center;
+    }
 }
 
 .STlist__number {
@@ -26,6 +44,14 @@
     font-weight: 100;
     font-size: 100px;
     color: #ffffff;
+
+    @include breakpointmedia(768, 'max-width') {
+        display: inline-block;
+        position: relative;
+        right: 0;
+        top: 0;
+        font-size: 60px;
+    }
 }
 
 .STlist__main {
@@ -33,6 +59,7 @@
     font-weight: 100;
     line-height: 30px;
     color: #8c8a8f;
+
     span { color: #ffffff; }
 }
 
@@ -41,6 +68,12 @@
     font-weight: 200;
     margin-top: 30px;
     color: #ffffff;
+
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 16px;
+        margin-top: 15px;
+        text-align: justify;
+    }
 }
 
 

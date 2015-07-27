@@ -6,10 +6,17 @@
     top: 0;
     font-size: 0;
     padding: 19px 21px;
+    box-sizing: border-box;
     user-select: none;
     cursor: pointer;
     z-index: 15;
-    transition: all 400ms ease;
+    transition: all 1000ms ease;
+
+    @include breakpointmedia(768, 'max-width') {
+        width: 100%;
+        background: #fff;
+        padding: 15px 15px;
+    }
 }
 
 .menuButton__item {
@@ -62,6 +69,10 @@
     padding: 90px 50px 90px 70px;
     box-sizing: border-box;
     z-index: 5;
+
+    @include breakpointmedia(768, 'max-width') {
+        padding: 10px;
+    }
 }
 
 .menuNav__list {
@@ -74,6 +85,11 @@
         transform: translateX(-100%);
         opacity: 0;
         margin-top: 15px;
+
+        @include breakpointmedia(768, 'max-width') {
+            margin-top: 8px;
+        }
+
         &:first-child { margin-top: 0; }
 
         &:hover a { opacity: 1; }
@@ -86,6 +102,10 @@
         text-decoration: none;
         transition: all 0.2s ease;
         opacity: 0.8;
+
+        @include breakpointmedia(768, 'max-width') {
+            font-size: 20px;
+        }
 
         &.active {
             opacity: 1;
@@ -118,8 +138,12 @@
 
 $columnsNav: 10;
 body.active_nav {
-    .containers-wrap, .menuButton {
+    .containers-wrap, header {
         margin-left: 360px;
+
+        @include breakpointmedia(768, 'max-width') {
+            margin-left: 55%;
+        }
     }
 
     .onepage-pagination { opacity: 0; }

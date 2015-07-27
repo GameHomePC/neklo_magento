@@ -5,6 +5,18 @@
     height: 100%;
     overflow: hidden;
     min-width: 310px;
+
+    @include breakpointmedia(768, 'max-width') {
+        min-height: inherit;
+        height: auto;
+    }
+}
+
+.main {
+    @include breakpointmedia(768, 'max-width') {
+        padding: 20px 10px;
+        box-sizing: border-box;
+    }
 }
 
 .container-title {
@@ -31,6 +43,10 @@
     letter-spacing: -0.5px;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.35);
 
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 30px;
+    }
+
     &:after {
         display: block;
         width: 180px;
@@ -46,4 +62,9 @@
     font-weight: 300;
     color: #ffffff;
     margin-top: 12px;
+
+    @include breakpointmedia(768, 'max-width') {
+        font-size: 14px;
+        margin-top: 8px;
+    }
 }
