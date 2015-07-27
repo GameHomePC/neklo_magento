@@ -2,7 +2,6 @@ body {
     font-family: $Roboto;
     font-size: 16px;
     -webkit-backface-visibility: hidden;
-    overflow: hidden;
 }
 
 .main, .main__inner {
@@ -22,14 +21,6 @@ html, body, .main, .main__inner {
 .wrapper {
     width: 900px;
     margin: 0 auto;
-}
-
-.containers-wrap, .window {
-    position: absolute!important;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
 }
 
 /* flex */
