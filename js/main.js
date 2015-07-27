@@ -141,7 +141,7 @@ Constructor.prototype.getNavigation = function() {
 //=================
 Constructor.prototype.isSectionTitle = function() {
     $('.title_js').textillate({
-        autoStart: false,
+        autoStart: true,
         minDisplayTime: 500,
         initialDelay: 300,
         in: {
@@ -159,7 +159,7 @@ Constructor.prototype.isSectionTitle = function() {
     });
 
     $('.title_sub_js').textillate({
-        autoStart: false,
+        autoStart: true,
         minDisplayTime: 500,
         initialDelay: 400,
         in: {
