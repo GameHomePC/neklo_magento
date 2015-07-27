@@ -3,7 +3,7 @@ html.no-touch, .no-touch body {
 }
 
 .no-touch {
-    header { transition: all 1s ease; }
+    header, .containers-wrap { transition: all 500ms ease!important; }
 }
 
 .containers-wrap {

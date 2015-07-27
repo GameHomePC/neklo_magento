@@ -211,7 +211,7 @@ Constructor.prototype.getScrollPage = function() {
                 }
             },
             afterMove: function(index) {
-
+                console.log('1212')
             },
             loop: false,
             keyboard: true,

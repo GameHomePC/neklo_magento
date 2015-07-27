@@ -124,7 +124,8 @@
         }
 
         $.fn.moveDown = function() {
-            var el = $(this)
+            var el = $(this);
+
             index = $(settings.sectionContainer +".active").data("index");
             current = $(settings.sectionContainer + "[data-index='" + index + "']");
             next = $(settings.sectionContainer + "[data-index='" + (index + 1) + "']");
@@ -140,8 +141,10 @@
                 pos = (index * 100) * -1;
             }
             if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
-            current.removeClass("active")
+
+            current.removeClass("active");
             next.addClass("active");
+
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
                 $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
@@ -175,8 +178,10 @@
                 pos = ((next.data("index") - 1) * 100) * -1;
             }
             if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
-            current.removeClass("active")
-            next.addClass("active")
+
+            current.removeClass("active");
+            next.addClass("active");
+
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
                 $(".onepage-pagination li a" + "[data-index='" + next.data("index") + "']").addClass("active");
@@ -349,16 +354,16 @@
         }
 
         if(window.location.hash != "" && window.location.hash != "#1") {
-            init_index =  window.location.hash.replace("#", "")
+            init_index =  window.location.hash.replace("#", "");
 
             if (parseInt(init_index) <= total && parseInt(init_index) > 0) {
-                $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active")
-                $("body").addClass("viewing-page-"+ init_index)
+                $(settings.sectionContainer + "[data-index='" + init_index + "']").addClass("active");
+                $("body").addClass("viewing-page-"+ init_index);
                 if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + init_index + "']").addClass("active");
 
                 next = $(settings.sectionContainer + "[data-index='" + (init_index) + "']");
                 if(next) {
-                    next.addClass("active")
+                    next.addClass("active");
                     if(settings.pagination == true) $(".onepage-pagination li a" + "[data-index='" + (init_index) + "']").addClass("active");
                     $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
                     $("body").addClass("viewing-page-"+next.data("index"))

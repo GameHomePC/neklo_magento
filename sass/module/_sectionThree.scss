@@ -219,7 +219,7 @@
         height: 400px!important;
 
         @include breakpointmedia(768, 'max-width') {
-            height: auto;
+            height: auto!important;
         }
     }
 
