@@ -190,34 +190,52 @@ Constructor.prototype.isSectionTitle = function() {
 //=================
 Constructor.prototype.getScrollPage = function() {
     var _this = this;
-    if(!Modernizr.touch) {
-        this.containersWrap.onepage_scroll({
-            sectionContainer: "section.container",
-            easing: "ease",
-            animationTime: 1000,
-            pagination: true,
-            paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
-            updateURL: false,
-            responsiveFallback: false,
-            beforeMove: function(index) {
-                var title = $('.section.container[data-index="' + index + '"]');
-                title.find('.title_js').textillate('start');
-                title.find('.title_sub_js').textillate('start');
 
-                if(index !== 1) {
-                    _this.body.addClass('activeColorMenu');
-                } else {
-                    _this.body.removeClass('activeColorMenu');
-                }
-            },
-            afterMove: function(index) {
-                console.log('1212')
-            },
-            loop: false,
-            keyboard: true,
-            direction: "vertical"
-        });
-    }
+    this.getPageScroll = function() {
+        if(!Modernizr.mq('(max-width: 1024px)')) {
+            _this.containersWrap.onepage_scroll({
+                sectionContainer: "section.container",
+                easing: "ease",
+                animationTime: 1000,
+                pagination: true,
+                paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
+                updateURL: false,
+                responsiveFallback: false,
+                beforeMove: function(index) {
+                    var title = $('.section.container[data-index="' + index + '"]');
+                    title.find('.title_js').textillate('start');
+                    title.find('.title_sub_js').textillate('start');
+
+                    if(index !== 1) {
+                        _this.body.addClass('activeColorMenu');
+                    } else {
+                        _this.body.removeClass('activeColorMenu');
+                    }
+                },
+                afterMove: function(index) {
+
+                },
+                loop: false,
+                keyboard: true,
+                direction: "vertical"
+            });
+        } else {
+            $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
+            _this.containersWrap.removeAttr('style');
+            _this.containersWrap.find('.container').css({
+                position: 'relative',
+                top: 'auto',
+                left: 'auto'
+            });
+        }
+    };
+
+    this.getPageScroll();
+
+    $(window).resize(function() {
+        _this.getPageScroll();
+    });
+
 
     this.sectionOneIconBottom.on('click', function() {
         if(!Modernizr.touch) {

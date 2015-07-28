@@ -74,13 +74,13 @@
             opacity: 1;
         }
     }
+}
 
-    &::-webkit-scrollbar{width:.3em;background-color:#eaeaea}
-    &::-webkit-scrollbar-thumb {
-        background-color: #cacaca;
-        -webkit-border-radius: 3px;
-        border-radius: 3px;
-    }
+*::-webkit-scrollbar{ width:.3em; background-color: #eaeaea }
+*::-webkit-scrollbar-thumb {
+    background-color: #cacaca;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .sliderMain__logo { cursor: pointer; }

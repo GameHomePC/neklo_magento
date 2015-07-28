@@ -47,9 +47,7 @@ gulp.task('dev-sass', function () {
 // ==============
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./"
-        },
+        proxy: 'neklo-magento.loc',
         port: 1515,
         ghostMode: {
             clicks: true,

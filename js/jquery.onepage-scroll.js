@@ -85,7 +85,7 @@
         var settings = $.extend({}, defaults, options),
             el = $(this),
             sections = $(settings.sectionContainer)
-        total = sections.length,
+            total = sections.length,
             status = "off",
             topPos = 0,
             leftPos = 0,
@@ -106,17 +106,19 @@
                     var toppos = (el.height()/100)*pos;
                     $(this).animate({top: toppos+'px'},settings.animationTime);
                 }
-            } else{
-                $(this).css({
-                    "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    "transition": "all " + settings.animationTime + "ms " + settings.easing
-                });
+            } else {
+                if(!Modernizr.mq('(max-width: 1024px)')) {
+                    $(this).css({
+                        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                        "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                        "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                        "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                        "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                        "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                        "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                        "transition": "all " + settings.animationTime + "ms " + settings.easing
+                    });
+                }
             }
             $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
                 if (typeof settings.afterMove == 'function') settings.afterMove(index);
