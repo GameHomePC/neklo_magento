@@ -20,8 +20,17 @@ input, textarea {
     color: #fff;
     font-size: 13px;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0);
+    transition: all 0.4s ease;
     text-transform: uppercase;
+
+    &:focus {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    @include placeholder() {
+        color: #fff;
+    }
 }
 
 .form-textarea {
@@ -35,9 +44,17 @@ input, textarea {
     color: #fff;
     font-size: 13px;
     font-weight: bold;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0);
     text-transform: uppercase;
     resize: none;
+
+    &:focus {
+        background: rgba(0, 0, 0, 0.15);
+    }
+
+    @include placeholder() {
+        color: #fff;
+    }
 }
 
 

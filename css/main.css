@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url(../fonts/fonts.css);
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
-.sprite-sprite, body.activeColorMenu .menuButton__iconClose, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .menuButton__iconClose, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:before, .openHoverIcon:before, .sliderContentMain__close {
-  background-image: url('/images/sprite-s8bb7b24bbe.png');
+.sprite-sprite, body.activeColorMenu .menuButton__iconClose, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .menuButton__iconClose, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:hover:before, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:hover:before, .bx-wrapper .bx-next:before, .openHoverIcon:before, .sliderContentMain__close {
+  background-image: url('/images/sprite-sd46cc6b474.png');
   background-repeat: no-repeat; }
 
 /* sprite */
@@ -145,7 +145,7 @@ html, body, .main, .main__inner {
 
 /* activeColor */
 body.activeColorMenu .menuButton__iconClose {
-  background-position: 0 -1027px;
+  background-position: 0 -1073px;
   width: 23px;
   height: 22px; }
 body.activeColorMenu .menuButton__text {
@@ -199,12 +199,12 @@ body.viewing-page-7 .onepage-pagination a:hover i {
   display: inline-block; }
 
 .icon_1 {
-  background-position: 0 -1003px;
+  background-position: 0 -1049px;
   width: 24px;
   height: 24px; }
 
 .icon_2 {
-  background-position: 0 -1071px;
+  background-position: 0 -1117px;
   width: 24px;
   height: 16px; }
 
@@ -237,8 +237,20 @@ input, textarea {
   color: #fff;
   font-size: 13px;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.15);
+  background: transparent;
+  -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease;
   text-transform: uppercase; }
+  .form-input:focus {
+    background: rgba(0, 0, 0, 0.15); }
+  .form-input.placeholder {
+    color: #fff; }
+  .form-input:-moz-placeholder {
+    color: #fff; }
+  .form-input::-moz-placeholder {
+    color: #fff; }
+  .form-input::-webkit-input-placeholder {
+    color: #fff; }
 
 .form-textarea {
   display: inline-block;
@@ -251,9 +263,19 @@ input, textarea {
   color: #fff;
   font-size: 13px;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.15);
+  background: transparent;
   text-transform: uppercase;
   resize: none; }
+  .form-textarea:focus {
+    background: rgba(0, 0, 0, 0.15); }
+  .form-textarea.placeholder {
+    color: #fff; }
+  .form-textarea:-moz-placeholder {
+    color: #fff; }
+  .form-textarea::-moz-placeholder {
+    color: #fff; }
+  .form-textarea::-webkit-input-placeholder {
+    color: #fff; }
 
 .btn {
   position: relative;
@@ -2783,7 +2805,7 @@ Copyright (c) 2015 Daniel Eden
 
 .menuButton__iconClose {
   display: inline-block;
-  background-position: 0 -1049px;
+  background-position: 0 -1095px;
   width: 23px;
   height: 22px; }
 
@@ -2831,7 +2853,7 @@ Copyright (c) 2015 Daniel Eden
     text-decoration: none;
     -webkit-transition: all 0.2s ease;
             transition: all 0.2s ease;
-    opacity: 0.8; }
+    opacity: 0.7; }
     @media screen and (max-width: 48em) {
       .menuNav__list a {
         font-size: 20px; } }
@@ -2971,7 +2993,7 @@ body.active_nav .menuNav__listMin li {
 .sectionOne__logo {
   display: block;
   margin: 0 auto;
-  background-position: 0 -1087px;
+  background-position: 0 -1133px;
   width: 192px;
   height: 230px; }
 
@@ -3264,10 +3286,7 @@ body.active_nav .menuNav__listMin li {
 
 .STlist__item {
   padding-left: 55px;
-  padding-right: 55px;
-  opacity: 0;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease; }
+  padding-right: 55px; }
   @media screen and (max-width: 48em) {
     .STlist__item {
       display: block;
@@ -3318,17 +3337,6 @@ body.active_nav .menuNav__listMin li {
       margin-top: 15px;
       text-align: justify; } }
 
-.sectionTwo.active .STlist__item {
-  opacity: 1;
-  -webkit-animation-name: lightSpeedIn;
-          animation-name: lightSpeedIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s; }
-
 .sectionThree {
   background: url("../images/BG/Bg_Portfolio.jpg") center center no-repeat;
   background-size: cover; }
@@ -3348,41 +3356,55 @@ body.active_nav .menuNav__listMin li {
   top: 0;
   bottom: 0;
   margin: auto;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
-  -webkit-transition-delay: 1000ms;
-          transition-delay: 1000ms;
+  -webkit-transition: all 500ms ease;
+          transition: all 500ms ease;
   width: 55px;
   height: 55px;
   border-radius: 50%;
   border: 3px solid #fff;
   box-sizing: border-box; }
+  .bx-wrapper .bx-prev:hover, .bx-wrapper .bx-next:hover {
+    background: #fff; }
 .bx-wrapper .bx-prev {
   right: -120px;
   -webkit-transform: translateX(500px);
       -ms-transform: translateX(500px);
           transform: translateX(500px);
   text-align: center; }
+  .bx-wrapper .bx-prev:hover:before {
+    background-position: 0 -986px;
+    width: 16px;
+    height: 23px; }
   .bx-wrapper .bx-prev:before {
     display: inline-block;
     margin-top: 14px;
-    background-position: 0 -963px;
+    margin-right: -3px;
+    background-position: 0 -1009px;
     width: 16px;
     height: 23px;
     content: ""; }
+    .bx-wrapper .bx-prev:before:hover, .bx-wrapper .bx-prev:before.arrow-right-hover {
+      background-position: 0 -986px; }
 .bx-wrapper .bx-next {
   left: -120px;
   -webkit-transform: translateX(-500px);
       -ms-transform: translateX(-500px);
           transform: translateX(-500px);
   text-align: center; }
+  .bx-wrapper .bx-next:hover:before {
+    background-position: 0 -940px;
+    width: 16px;
+    height: 23px; }
   .bx-wrapper .bx-next:before {
     display: inline-block;
     margin-top: 14px;
-    background-position: 0 -940px;
+    margin-left: -3px;
+    background-position: 0 -963px;
     width: 16px;
     height: 23px;
     content: ""; }
+    .bx-wrapper .bx-next:before:hover, .bx-wrapper .bx-next:before.arrow-left-hover {
+      background-position: 0 -940px; }
 
 .sliderMain__item {
   background: url("../images/bg_slider_top.jpg") no-repeat;
@@ -3427,8 +3449,9 @@ body.active_nav .menuNav__listMin li {
   background: #959595;
   padding: 28px 60px;
   box-sizing: border-box;
-  -webkit-transition: all 0.2s ease;
-          transition: all 0.2s ease;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+  cursor: pointer;
   z-index: 10; }
   @media screen and (max-width: 48em) {
     .sliderMain__contentHover {
@@ -3523,7 +3546,7 @@ body.active_nav .menuNav__listMin li {
   position: absolute;
   right: -30px;
   top: -30px;
-  background-position: 0 -1027px;
+  background-position: 0 -1073px;
   width: 23px;
   height: 22px;
   cursor: pointer; }
@@ -3587,10 +3610,7 @@ body.active_nav .menuNav__listMin li {
   font-size: 45px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ffffff;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
-  opacity: 0; }
+  color: #ffffff; }
   @media screen and (max-width: 48em) {
     .sectionMain__title {
       font-size: 25px;
@@ -3600,10 +3620,7 @@ body.active_nav .menuNav__listMin li {
   color: #ffffff;
   font-weight: 300;
   line-height: 20px;
-  margin-top: 25px;
-  -webkit-transition: all 1s ease;
-          transition: all 1s ease;
-  opacity: 0; }
+  margin-top: 25px; }
   @media screen and (max-width: 48em) {
     .sectionMain__description {
       margin-top: 10px;
@@ -3614,27 +3631,6 @@ body.active_nav .menuNav__listMin li {
   color: #150500; }
 
 /* sectionMain.active */
-.sectionMain.active .sectionMain__title {
-  opacity: 1;
-  -webkit-animation-name: rollIn;
-          animation-name: rollIn;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s; }
-.sectionMain.active .sectionMain__description {
-  opacity: 1;
-  -webkit-animation-name: zoomInLeft;
-          animation-name: zoomInLeft;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-  -webkit-transition-delay: 0.7s;
-          transition-delay: 0.7s; }
-
 html.no-touch, .no-touch body {
   overflow: hidden; }
 
@@ -3697,37 +3693,21 @@ html.no-touch, .no-touch body {
     text-align: right;
     padding: 3px 23px 3px 0; }
     .onepage-pagination a.active span {
-      -webkit-animation-name: scaleAnimate2;
-              animation-name: scaleAnimate2;
-      -webkit-animation-duration: 300ms;
-              animation-duration: 300ms;
       -webkit-transform: scale(1.1) translateX(-10px);
           -ms-transform: scale(1.1) translateX(-10px);
               transform: scale(1.1) translateX(-10px);
       opacity: 1; }
     .onepage-pagination a.active i {
-      -webkit-animation-name: scaleAnimate;
-              animation-name: scaleAnimate;
-      -webkit-animation-duration: 1s;
-              animation-duration: 1s;
       -webkit-transform: scale(1.5);
           -ms-transform: scale(1.5);
               transform: scale(1.5);
       border-color: #888888; }
     .onepage-pagination a:hover span {
-      -webkit-animation-name: scaleAnimate2;
-              animation-name: scaleAnimate2;
-      -webkit-animation-duration: 300ms;
-              animation-duration: 300ms;
       -webkit-transform: scale(1.1) translateX(-10px);
           -ms-transform: scale(1.1) translateX(-10px);
               transform: scale(1.1) translateX(-10px);
       opacity: 1; }
     .onepage-pagination a:hover i {
-      -webkit-animation-name: scaleAnimate;
-              animation-name: scaleAnimate;
-      -webkit-animation-duration: 1s;
-              animation-duration: 1s;
       -webkit-transform: scale(1.5);
           -ms-transform: scale(1.5);
               transform: scale(1.5);

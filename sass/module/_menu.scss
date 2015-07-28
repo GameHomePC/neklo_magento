@@ -102,7 +102,7 @@
         color: #ffffff;
         text-decoration: none;
         transition: all 0.2s ease;
-        opacity: 0.8;
+        opacity: 0.7;
 
         @include breakpointmedia(768, 'max-width') {
             font-size: 20px;

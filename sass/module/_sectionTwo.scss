@@ -15,8 +15,8 @@
 .STlist__item {
     padding-left: 55px;
     padding-right: 55px;
-    opacity: 0;
-    transition: all 1s ease;
+//    opacity: 0;
+//    transition: all 1s ease;
 
     @include breakpointmedia(768, 'max-width') {
         display: block;
@@ -78,11 +78,11 @@
 
 
 .sectionTwo.active {
-    .STlist__item {
-        opacity: 1;
-        animation-name: lightSpeedIn;
-        animation-duration: 1s;
-        animation-delay: 0.5s;
-        transition-delay: 0.5s;
-    }
+//    .STlist__item {
+//        opacity: 1;
+//        animation-name: lightSpeedIn;
+//        animation-duration: 1s;
+//        animation-delay: 0.5s;
+//        transition-delay: 0.5s;
+//    }
 }

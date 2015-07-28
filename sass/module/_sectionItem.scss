@@ -32,8 +32,8 @@
     font-weight: bold;
     text-transform: uppercase;
     color: #ffffff;
-    transition: all 1s ease;
-    opacity: 0;
+//    transition: all 1s ease;
+//    opacity: 0;
 
     @include breakpointmedia(768, 'max-width') {
         font-size: 25px;
@@ -46,8 +46,8 @@
     font-weight: 300;
     line-height: 20px;
     margin-top: 25px;
-    transition: all 1s ease;
-    opacity: 0;
+//    transition: all 1s ease;
+//    opacity: 0;
 
     @include breakpointmedia(768, 'max-width') {
         margin-top: 10px;
@@ -62,19 +62,19 @@
 
 /* sectionMain.active */
 .sectionMain.active {
-    .sectionMain__title {
-        opacity: 1;
-        animation-name: rollIn;
-        animation-duration: 0.5s;
-        animation-delay: 0.5s;
-        transition-delay: 0.5s;
-    }
-
-    .sectionMain__description {
-        opacity: 1;
-        animation-name: zoomInLeft;
-        animation-duration: 0.5s;
-        animation-delay: 0.7s;
-        transition-delay: 0.7s;
-    }
+//    .sectionMain__title {
+//        opacity: 1;
+//        animation-name: rollIn;
+//        animation-duration: 0.5s;
+//        animation-delay: 0.5s;
+//        transition-delay: 0.5s;
+//    }
+//
+//    .sectionMain__description {
+//        opacity: 1;
+//        animation-name: zoomInLeft;
+//        animation-duration: 0.5s;
+//        animation-delay: 0.7s;
+//        transition-delay: 0.7s;
+//    }
 }

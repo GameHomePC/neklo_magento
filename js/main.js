@@ -30,6 +30,8 @@ Constructor.prototype.init = function() {
     this.getSliderMainClick();
     this.getContactForm();
     this.getPopup();
+
+    _this.contactsForm.find('input[name="name"]').focus();
 };
 
 //===============
@@ -148,7 +150,7 @@ Constructor.prototype.isSectionTitle = function() {
         minDisplayTime: 500,
         initialDelay: 300,
         in: {
-            effect: "slideInUp",
+            effect: "slideInDown",
             shuffle: true,
             delay: 20
         },
@@ -161,27 +163,27 @@ Constructor.prototype.isSectionTitle = function() {
         }
     });
 
-    $('.title_sub_js').textillate({
-        autoStart: true,
-        minDisplayTime: 500,
-        initialDelay: 400,
-        in: {
-            effect: "slideInDown",
-            shuffle: true,
-            delay: 10
-        },
-        out: {
-            effect: 'hinge',
-            delayScale: 1.5,
-            delay: 0,
-            sync: false,
-            shuffle: false
-        }
-    });
+    //$('.title_sub_js').textillate({
+    //    autoStart: true,
+    //    minDisplayTime: 500,
+    //    initialDelay: 400,
+    //    in: {
+    //        effect: "slideInDown",
+    //        shuffle: true,
+    //        delay: 10
+    //    },
+    //    out: {
+    //        effect: 'hinge',
+    //        delayScale: 1.5,
+    //        delay: 0,
+    //        sync: false,
+    //        shuffle: false
+    //    }
+    //});
 
     if(Modernizr.touch) {
        $('.title_js').textillate('start');
-       $('.title_sub_js').textillate('start');
+       //$('.title_sub_js').textillate('start');
     }
 };
 
@@ -189,7 +191,10 @@ Constructor.prototype.isSectionTitle = function() {
 // getScrollPage
 //=================
 Constructor.prototype.getScrollPage = function() {
-    var _this = this;
+    var _this = this,
+        menu = this.menuNavList;
+
+    menu.find("a[data-id='" + 1 + "']").addClass('active');
 
     this.getPageScroll = function() {
         if(!Modernizr.mq('(max-width: 1024px)')) {
@@ -204,7 +209,10 @@ Constructor.prototype.getScrollPage = function() {
                 beforeMove: function(index) {
                     var title = $('.section.container[data-index="' + index + '"]');
                     title.find('.title_js').textillate('start');
-                    title.find('.title_sub_js').textillate('start');
+                    //title.find('.title_sub_js').textillate('start');
+
+                    menu.find("a").removeClass('active');
+                    menu.find("a[data-id='" + index + "']").addClass('active');
 
                     if(index !== 1) {
                         _this.body.addClass('activeColorMenu');
@@ -235,7 +243,6 @@ Constructor.prototype.getScrollPage = function() {
     $(window).resize(function() {
         _this.getPageScroll();
     });
-
 
     this.sectionOneIconBottom.on('click', function() {
         if(!Modernizr.touch) {
@@ -320,6 +327,16 @@ Constructor.prototype.getPopup = function() {
 //=================
 Constructor.prototype.getContactForm = function() {
     var _this = this;
+
+    function isFocus() {
+        console.log(this.section.eq(8).hasClass('active'));
+
+        if(_this.section.eq(8).hasClass('active')) {
+
+        }
+    }
+
+    $(window).on('scroll', isFocus);
 
     this.contactsForm.validate({
         rules: {

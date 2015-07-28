@@ -21,22 +21,31 @@
         top: 0;
         bottom: 0;
         margin: auto;
-        transition: all 1s ease;
-        transition-delay: 1000ms;
+        transition: all 500ms ease;
+//        transition-delay: 1000ms;
         width: 55px;
         height: 55px;
         border-radius: 50%;
         border: 3px solid #fff;
         box-sizing: border-box;
+
+        &:hover {
+            background: #fff;
+        }
     }
 
     .bx-prev {
         right: -120px;
         transform: translateX(500px);
         text-align: center;
+        &:hover:before {
+            @include my-sprite(arrow-right-hover);
+        }
+
         &:before {
             display: inline-block;
             margin-top: 14px;
+            margin-right: -3px;
             @include my-sprite(arrow-right);
             content: "";
         }
@@ -46,9 +55,15 @@
         left: -120px;
         transform: translateX(-500px);
         text-align: center;
+
+        &:hover:before {
+            @include my-sprite(arrow-left-hover);
+        }
+
         &:before {
             display: inline-block;
             margin-top: 14px;
+            margin-left: -3px;
             @include my-sprite(arrow-left);
             content: "";
         }
@@ -98,7 +113,8 @@
     background: #959595;
     padding: 28px 60px;
     box-sizing: border-box;
-    transition: all 0.2s ease;
+    transition: all 0.5s ease;
+    cursor: pointer;
     z-index: 10;
 
     @include breakpointmedia(768, 'max-width') {
