@@ -39,7 +39,9 @@ Constructor.prototype.isFocus = function() {
     var _this = this,
         inputName = this.contactsForm.find('input[name="name"]');
 
-    inputName.focus();
+    if(!Modernizr.touch) {
+        inputName.focus();
+    }
 };
 
 //===============
