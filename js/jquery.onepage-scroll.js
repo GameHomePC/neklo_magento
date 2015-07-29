@@ -395,6 +395,9 @@
                 var page_index = $(this).data("index");
                 el.moveTo(page_index);
 
+                var inputName = $('.containers-wrap').find('input[name="name"]');
+                inputName.focus();
+
                 return false;
             });
         }

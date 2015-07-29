@@ -35,6 +35,16 @@ Constructor.prototype.init = function() {
 //===============
 // getSliderMainClick
 //===============
+Constructor.prototype.isFocus = function() {
+    var _this = this,
+        inputName = this.contactsForm.find('input[name="name"]');
+
+    inputName.focus();
+};
+
+//===============
+// getSliderMainClick
+//===============
 Constructor.prototype.getSliderMainClick = function() {
     var _this = this,
         jsOpenMore = this.jsOpenMore;
@@ -122,7 +132,7 @@ Constructor.prototype.getMenuNavScroll = function() {
 
         link.removeClass('active');
         self.addClass('active');
-
+        _this.isFocus();
         _this.getScrollPageClick(selfAttr);
 
         return false;
@@ -136,6 +146,8 @@ Constructor.prototype.getNavigation = function() {
     var _this = this;
 
     this.navigationButtom.on('click', function() {
+        _this.isFocus();
+
         if(!_this.body.hasClass('active_nav')) {
             _this.body.addClass('active_nav');
         } else {
@@ -215,6 +227,7 @@ Constructor.prototype.getScrollPage = function() {
                     title.find('.title_js').textillate('start');
                     //title.find('.title_sub_js').textillate('start');
 
+                    _this.isFocus();
                     menu.find("a").removeClass('active');
                     menu.find("a[data-id='" + index + "']").addClass('active');
 
@@ -232,7 +245,7 @@ Constructor.prototype.getScrollPage = function() {
 
                 },
                 loop: false,
-                keyboard: true
+                keyboard: false
             });
         } else {
             $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
