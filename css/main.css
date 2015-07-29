@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @import url(../fonts/fonts.css);
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
-.sprite-sprite, body.activeColorMenu .menuButton__iconClose, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .menuButton__iconClose, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:hover:before, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:hover:before, .bx-wrapper .bx-next:before, .openHoverIcon:before, .sliderContentMain__close {
-  background-image: url('/images/sprite-se1aea6904f.png');
+.sprite-sprite, body.activeColorMenu .menuButton__iconClose, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .menuButton__iconClose, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:hover:before, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:hover:before, .bx-wrapper .bx-next:before, .sliderMain__iconItem a:hover .icon_1, .sliderMain__iconItem span:hover .icon_1, .sliderMain__iconItem a:hover .icon_2, .sliderMain__iconItem span:hover .icon_2, .openHoverIcon:before, .sliderContentMain__close {
+  background-image: url('/images/sprite-s445e6d3c9d.png');
   background-repeat: no-repeat; }
 
 /* sprite */
@@ -139,7 +139,7 @@ html, body, .main, .main__inner {
 
 /* activeColor */
 body.activeColorMenu .menuButton__iconClose {
-  background-position: 0 -1073px;
+  background-position: 0 -1097px;
   width: 23px;
   height: 22px; }
 body.activeColorMenu .menuButton__text {
@@ -193,14 +193,18 @@ body.viewing-page-7 .onepage-pagination a:hover i {
   display: inline-block; }
 
 .icon_1 {
-  background-position: 0 -1049px;
+  background-position: 0 -1073px;
   width: 24px;
   height: 24px; }
+  .icon_1:hover, .icon_1.chain-hover {
+    background-position: 0 -1049px; }
 
 .icon_2 {
-  background-position: 0 -1117px;
+  background-position: 0 -1157px;
   width: 24px;
   height: 16px; }
+  .icon_2:hover, .icon_2.eye-hover {
+    background-position: 0 -1141px; }
 
 .tl {
   text-align: left; }
@@ -2803,7 +2807,7 @@ Copyright (c) 2015 Daniel Eden
 
 .menuButton__iconClose {
   display: inline-block;
-  background-position: 0 -1095px;
+  background-position: 0 -1119px;
   width: 23px;
   height: 22px; }
 
@@ -2904,7 +2908,8 @@ body.active_nav .menuNav {
       -ms-transform: translateX(0px);
           transform: translateX(0px); }
 body.active_nav .onepage-pagination {
-  opacity: 0; }
+  opacity: 0;
+  visibility: hidden; }
 body.active_nav .menuButton__item {
   display: none; }
 body.active_nav .menuButton__close {
@@ -2998,7 +3003,7 @@ body.active_nav .menuNav__listMin li {
 .sectionOne__logo {
   display: block;
   margin: 0 auto;
-  background-position: 0 -1133px;
+  background-position: 0 -1173px;
   width: 192px;
   height: 230px; }
 
@@ -3501,7 +3506,19 @@ body.active_nav .menuNav__listMin li {
     line-height: 60px;
     border-radius: 50%;
     border: 1px solid #fff;
-    margin-left: 25px; }
+    margin-left: 25px;
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease; }
+    .sliderMain__iconItem a:hover, .sliderMain__iconItem span:hover {
+      background: #fff; }
+      .sliderMain__iconItem a:hover .icon_1, .sliderMain__iconItem span:hover .icon_1 {
+        background-position: 0 -1049px;
+        width: 24px;
+        height: 24px; }
+      .sliderMain__iconItem a:hover .icon_2, .sliderMain__iconItem span:hover .icon_2 {
+        background-position: 0 -1141px;
+        width: 24px;
+        height: 16px; }
     @media screen and (max-width: 48em) {
       .sliderMain__iconItem a, .sliderMain__iconItem span {
         width: 40px;
@@ -3547,7 +3564,7 @@ body.active_nav .menuNav__listMin li {
   position: absolute;
   right: -30px;
   top: -30px;
-  background-position: 0 -1073px;
+  background-position: 0 -1097px;
   width: 23px;
   height: 22px;
   cursor: pointer; }
@@ -3647,14 +3664,13 @@ html.no-touch, .no-touch body {
   .section.animateIn {
     -webkit-animation-duration: 1000ms;
             animation-duration: 1000ms;
-    -webkit-animation-name: slideInDown;
-            animation-name: slideInDown; }
+    z-index: 11; }
   .section.animateOut {
     -webkit-animation-duration: 1000ms;
             animation-duration: 1000ms;
-    -webkit-animation-name: slideinDown;
-            animation-name: slideinDown;
-    z-index: 11; }
+    -webkit-animation-name: slideOutUp;
+            animation-name: slideOutUp;
+    z-index: 13; }
 
 .containers-wrap, .window {
   background: #fff;
@@ -3765,6 +3781,11 @@ html.no-touch, .no-touch body {
 .contacts__item {
   padding-left: 11px;
   padding-right: 11px; }
+  .contacts__item a {
+    color: #fff;
+    text-decoration: none; }
+    .contacts__item a:hover {
+      text-decoration: underline; }
   @media screen and (max-width: 48em) {
     .contacts__item {
       padding-left: 0;
@@ -3794,7 +3815,12 @@ html.no-touch, .no-touch body {
     text-decoration: none;
     text-align: center;
     line-height: 40px;
-    margin-left: 20px; }
+    margin-left: 20px;
+    -webkit-transition: all 0.2s ease;
+            transition: all 0.2s ease; }
+    .contacts__iconItem a:hover {
+      background: #fff;
+      color: #6c619d; }
     .contacts__iconItem a:first-child {
       margin-left: 0; }
 

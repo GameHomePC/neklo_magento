@@ -177,6 +177,14 @@
         border-radius: 50%;
         border: 1px solid #fff;
         margin-left: 25px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #fff;
+
+            .icon_1 { @include my-sprite(chain-hover); }
+            .icon_2 { @include my-sprite(eye-hover); }
+        }
 
         @include breakpointmedia(768, 'max-width') {
             width: 40px;

@@ -15,6 +15,15 @@
     padding-left: 11px;
     padding-right: 11px;
 
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     @include breakpointmedia(768, 'max-width') {
         padding-left: 0;
         padding-right: 0;
@@ -47,6 +56,13 @@
         text-align: center;
         line-height: 40px;
         margin-left: 20px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #fff;
+            color: #6c619d;
+        }
+
 
         &:first-child {
             margin-left: 0;

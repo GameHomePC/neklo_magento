@@ -132,6 +132,8 @@ Constructor.prototype.getMenuNavScroll = function() {
         var self = $(this),
             selfAttr = +self.attr('data-id');
 
+        if(self.hasClass('active')) return false;
+
         link.removeClass('active');
         self.addClass('active');
         _this.isFocus();

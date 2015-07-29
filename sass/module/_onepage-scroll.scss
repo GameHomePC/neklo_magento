@@ -16,13 +16,13 @@ html.no-touch, .no-touch body {
 
     &.animateIn {
         animation-duration: 1000ms;
-        animation-name: slideInDown;
+        z-index: 11;
     }
 
     &.animateOut {
         animation-duration: 1000ms;
-        animation-name: slideinDown;
-        z-index: 11;
+        animation-name: slideOutUp;
+        z-index: 13;
     }
 }
 

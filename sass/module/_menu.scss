@@ -152,7 +152,7 @@ body.active_nav {
     }
 
     .menuNav { transform: translateX(0px); }
-    .onepage-pagination { opacity: 0; }
+    .onepage-pagination { opacity: 0; visibility: hidden; }
     .menuButton__item { display: none; }
     .menuButton__close { display: block; }
 

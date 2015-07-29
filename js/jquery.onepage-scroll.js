@@ -392,7 +392,11 @@
 
         if(settings.pagination == true)  {
             $(".onepage-pagination li a").click(function (){
-                var page_index = $(this).data("index");
+                var self = $(this),
+                    page_index = self.data("index");
+
+                if(self.hasClass('active')) return false;
+
                 el.moveTo(page_index);
 
                 var inputName = $('.containers-wrap').find('input[name="name"]');
@@ -401,7 +405,6 @@
                 return false;
             });
         }
-
 
         $(document).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
             event.preventDefault();
