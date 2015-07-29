@@ -39,7 +39,7 @@
         transform: translateX(500px);
         text-align: center;
         &:hover:before {
-            @include my-sprite(arrow-right-hover);
+            @include my-sprite(arrow-hover-right);
         }
 
         &:before {
@@ -57,7 +57,7 @@
         text-align: center;
 
         &:hover:before {
-            @include my-sprite(arrow-left-hover);
+            @include my-sprite(arrow-hover-left);
         }
 
         &:before {

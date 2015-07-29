@@ -28,6 +28,6 @@
     .sectionMain__description { opacity: 1; }
 
     html.no-touch, .no-touch body { overflow-y: auto; overflow-x: hidden; }
-    .containers-wrap { position: relative!important; }
+    .containers-wrap, .window { position: relative!important; }
     .onepage-pagination { display: none; }
 }

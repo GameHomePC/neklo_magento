@@ -3,10 +3,30 @@ html.no-touch, .no-touch body {
 }
 
 .no-touch {
-    header, .containers-wrap { transition: all 500ms ease!important; }
+    .header, .window { transition: all 500ms ease!important; }
 }
 
-.containers-wrap {
+.section {
+    z-index: 10;
+    left: 0!important;
+
+    &.active {
+        z-index: 12;
+    }
+
+    &.animateIn {
+        animation-duration: 1000ms;
+        animation-name: slideInDown;
+    }
+
+    &.animateOut {
+        animation-duration: 1000ms;
+        animation-name: slideinDown;
+        z-index: 11;
+    }
+}
+
+.containers-wrap, .window {
     background: #fff;
     position: absolute!important;
     top: 0;
@@ -19,10 +39,6 @@ html.no-touch, .no-touch body {
         height: auto;
         box-sizing: border-box;
     }
-}
-
-.window {
-    height: 100%;
 }
 
 .onepage-pagination {

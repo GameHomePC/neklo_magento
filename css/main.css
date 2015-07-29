@@ -2,7 +2,7 @@
 @import url(../fonts/fonts.css);
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
 .sprite-sprite, body.activeColorMenu .menuButton__iconClose, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .menuButton__iconClose, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:hover:before, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:hover:before, .bx-wrapper .bx-next:before, .openHoverIcon:before, .sliderContentMain__close {
-  background-image: url('/images/sprite-sd46cc6b474.png');
+  background-image: url('/images/sprite-se1aea6904f.png');
   background-repeat: no-repeat; }
 
 /* sprite */
@@ -83,12 +83,6 @@ body {
 
 html, body, .main, .main__inner {
   height: 100%; }
-
-.window {
-  position: relative;
-  -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-  z-index: 10; }
 
 .wrapper {
   max-width: 900px;
@@ -2753,6 +2747,10 @@ Copyright (c) 2015 Daniel Eden
   font-size: .85em;
   padding: 10px; }
 
+.header {
+  z-index: 16;
+  position: relative; }
+
 .menuButton {
   position: fixed;
   top: 0;
@@ -2765,8 +2763,8 @@ Copyright (c) 2015 Daniel Eden
           user-select: none;
   cursor: pointer;
   z-index: 15;
-  -webkit-transition: all 1000ms ease;
-          transition: all 1000ms ease; }
+  -webkit-transition: all 500ms ease;
+          transition: all 500ms ease; }
   @media screen and (max-width: 48em) {
     .menuButton {
       width: 100%;
@@ -2819,11 +2817,19 @@ Copyright (c) 2015 Daniel Eden
   background: url("../images/bg-nav.jpg");
   padding: 90px 50px 90px 70px;
   box-sizing: border-box;
-  z-index: 5; }
+  z-index: 15;
+  -webkit-transition: all 500ms ease;
+          transition: all 500ms ease;
+  -webkit-transform: translateX(-360px);
+      -ms-transform: translateX(-360px);
+          transform: translateX(-360px); }
   @media screen and (max-width: 48em) {
     .menuNav {
       padding: 10px;
-      width: 180px; } }
+      width: 180px;
+      -webkit-transform: translateX(-180px);
+          -ms-transform: translateX(-180px);
+              transform: translateX(-180px); } }
 
 .menuNav__list {
   counter-reset: li; }
@@ -2884,21 +2890,19 @@ Copyright (c) 2015 Daniel Eden
             transition: all 0.2s ease;
     opacity: 0.8; }
 
-.section {
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms; }
-  .section.animateIn {
-    -webkit-animation-name: flipInX;
-            animation-name: flipInX; }
-  .section.animateOut {
-    -webkit-animation-name: flipInX;
-            animation-name: flipInX; }
-
-body.active_nav .containers-wrap, body.active_nav header {
-  margin-left: 360px; }
+body.active_nav .window, body.active_nav .header {
+  -webkit-transform: translateX(360px);
+      -ms-transform: translateX(360px);
+          transform: translateX(360px); }
   @media screen and (max-width: 48em) {
-    body.active_nav .containers-wrap, body.active_nav header {
-      margin-left: 180px; } }
+    body.active_nav .window, body.active_nav .header {
+      -webkit-transform: translateX(180px);
+          -ms-transform: translateX(180px);
+              transform: translateX(180px); } }
+body.active_nav .menuNav {
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px); }
 body.active_nav .onepage-pagination {
   opacity: 0; }
 body.active_nav .menuButton__item {
@@ -2929,6 +2933,7 @@ body.active_nav .menuNav__listMin li {
   min-width: 310px; }
   @media screen and (max-width: 48em) {
     .container {
+      position: relative !important;
       min-height: inherit;
       height: auto; } }
 
@@ -3372,7 +3377,7 @@ body.active_nav .menuNav__listMin li {
           transform: translateX(500px);
   text-align: center; }
   .bx-wrapper .bx-prev:hover:before {
-    background-position: 0 -986px;
+    background-position: 0 -963px;
     width: 16px;
     height: 23px; }
   .bx-wrapper .bx-prev:before {
@@ -3383,8 +3388,6 @@ body.active_nav .menuNav__listMin li {
     width: 16px;
     height: 23px;
     content: ""; }
-    .bx-wrapper .bx-prev:before:hover, .bx-wrapper .bx-prev:before.arrow-right-hover {
-      background-position: 0 -986px; }
 .bx-wrapper .bx-next {
   left: -120px;
   -webkit-transform: translateX(-500px);
@@ -3399,12 +3402,10 @@ body.active_nav .menuNav__listMin li {
     display: inline-block;
     margin-top: 14px;
     margin-left: -3px;
-    background-position: 0 -963px;
+    background-position: 0 -986px;
     width: 16px;
     height: 23px;
     content: ""; }
-    .bx-wrapper .bx-next:before:hover, .bx-wrapper .bx-next:before.arrow-left-hover {
-      background-position: 0 -940px; }
 
 .sliderMain__item {
   background: url("../images/bg_slider_top.jpg") no-repeat;
@@ -3634,11 +3635,28 @@ body.active_nav .menuNav__listMin li {
 html.no-touch, .no-touch body {
   overflow: hidden; }
 
-.no-touch header, .no-touch .containers-wrap {
+.no-touch .header, .no-touch .window {
   -webkit-transition: all 500ms ease !important;
           transition: all 500ms ease !important; }
 
-.containers-wrap {
+.section {
+  z-index: 10;
+  left: 0 !important; }
+  .section.active {
+    z-index: 12; }
+  .section.animateIn {
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-name: slideInDown;
+            animation-name: slideInDown; }
+  .section.animateOut {
+    -webkit-animation-duration: 1000ms;
+            animation-duration: 1000ms;
+    -webkit-animation-name: slideinDown;
+            animation-name: slideinDown;
+    z-index: 11; }
+
+.containers-wrap, .window {
   background: #fff;
   position: absolute !important;
   top: 0;
@@ -3647,12 +3665,9 @@ html.no-touch, .no-touch body {
   width: 100%;
   z-index: 10; }
   @media screen and (max-width: 48em) {
-    .containers-wrap {
+    .containers-wrap, .window {
       height: auto;
       box-sizing: border-box; } }
-
-.window {
-  height: 100%; }
 
 .onepage-pagination {
   position: absolute;
@@ -3889,7 +3904,7 @@ html.no-touch, .no-touch body {
     overflow-y: auto;
     overflow-x: hidden; }
 
-  .containers-wrap {
+  .containers-wrap, .window {
     position: relative !important; }
 
   .onepage-pagination {

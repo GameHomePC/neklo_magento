@@ -107,18 +107,16 @@
                     $(this).animate({top: toppos+'px'},settings.animationTime);
                 }
             } else {
-                if(!Modernizr.mq('(max-width: 1024px)')) {
-                    $(this).css({
-                        "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                        "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                        "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                        "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                        "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                        "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                        "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                        "transition": "all " + settings.animationTime + "ms " + settings.easing
-                    });
-                }
+                $(this).css({
+                    //"-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    //"-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    //"-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    //"-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    //"-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    //"-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    //"transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)"
+                    //"transition": "all " + settings.animationTime + "ms " + settings.easing
+                });
             }
             $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
                 if (typeof settings.afterMove == 'function') settings.afterMove(index);
@@ -145,7 +143,8 @@
             if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
 
             current.removeClass("active");
-            next.addClass("active");
+            current.addClass("animateOut");
+            next.addClass("active animateIn");
 
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
@@ -182,7 +181,8 @@
             if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
 
             current.removeClass("active");
-            next.addClass("active");
+            current.addClass("animateOut");
+            next.addClass("active animateIn");
 
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
@@ -203,8 +203,11 @@
             next = $(settings.sectionContainer + "[data-index='" + (page_index) + "']");
             if(next.length > 0) {
                 if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
-                current.removeClass("active")
-                next.addClass("active")
+
+                current.removeClass("active");
+                current.addClass("animateOut");
+                next.addClass("active animateIn");
+
                 $(".onepage-pagination li a" + ".active").removeClass("active");
                 $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
                 $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');

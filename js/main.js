@@ -30,8 +30,6 @@ Constructor.prototype.init = function() {
     this.getSliderMainClick();
     this.getContactForm();
     this.getPopup();
-
-    _this.contactsForm.find('input[name="name"]').focus();
 };
 
 //===============
@@ -87,22 +85,27 @@ Constructor.prototype.getSliderMainClick = function() {
 Constructor.prototype.getSliderMain = function() {
     var _this = this;
 
-    this.sliderMain.bxSlider({
-        auto: false,
-        autoControls: false,
-        pause: 5e3,
-        slideMargin: 0,
-        nextText: "",
-        prevText: "",
-        pager: false,
-        infiniteLoop: true,
-        onSlideNext: function() {
-            _this.resetClass();
-        },
-        onSlidePrev: function() {
-            _this.resetClass();
-        }
-    });
+    this.getSliderFunc = function() {
+        this.sliderMain.bxSlider({
+            auto: false,
+            autoControls: false,
+            pause: 5e3,
+            slideMargin: 0,
+            nextText: "",
+            prevText: "",
+            pager: false,
+            infiniteLoop: true,
+            responsive: true,
+            onSlideNext: function() {
+                _this.resetClass();
+            },
+            onSlidePrev: function() {
+                _this.resetClass();
+            }
+        });
+    };
+
+    this.getSliderFunc();
 };
 
 //===============
@@ -196,7 +199,7 @@ Constructor.prototype.getScrollPage = function() {
 
     menu.find("a[data-id='" + 1 + "']").addClass('active');
 
-    this.getPageScroll = function() {
+    this.getScrollFunc = function() {
         if(!Modernizr.mq('(max-width: 1024px)')) {
             _this.containersWrap.onepage_scroll({
                 sectionContainer: "section.container",
@@ -206,6 +209,7 @@ Constructor.prototype.getScrollPage = function() {
                 paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
                 updateURL: false,
                 responsiveFallback: false,
+                direction: "horizontal",
                 beforeMove: function(index) {
                     var title = $('.section.container[data-index="' + index + '"]');
                     title.find('.title_js').textillate('start');
@@ -219,13 +223,16 @@ Constructor.prototype.getScrollPage = function() {
                     } else {
                         _this.body.removeClass('activeColorMenu');
                     }
+
+                    setTimeout(function() {
+                        _this.containersWrap.find('.section').removeClass('animateIn animateOut');
+                    }, 1000);
                 },
                 afterMove: function(index) {
 
                 },
                 loop: false,
-                keyboard: true,
-                direction: "vertical"
+                keyboard: true
             });
         } else {
             $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
@@ -238,11 +245,8 @@ Constructor.prototype.getScrollPage = function() {
         }
     };
 
-    this.getPageScroll();
-
-    $(window).resize(function() {
-        _this.getPageScroll();
-    });
+    this.getScrollFunc();
+    $(window).on('resize', _this.getScrollFunc.bind(this));
 
     this.sectionOneIconBottom.on('click', function() {
         if(!Modernizr.touch) {
@@ -327,16 +331,6 @@ Constructor.prototype.getPopup = function() {
 //=================
 Constructor.prototype.getContactForm = function() {
     var _this = this;
-
-    function isFocus() {
-        console.log(this.section.eq(8).hasClass('active'));
-
-        if(_this.section.eq(8).hasClass('active')) {
-
-        }
-    }
-
-    $(window).on('scroll', isFocus);
 
     this.contactsForm.validate({
         rules: {

@@ -12,12 +12,6 @@ html, body, .main, .main__inner {
     height: 100%;
 }
 
-.window {
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    z-index: 10;
-}
-
 .wrapper {
     max-width: 900px;
     margin: 0 auto;

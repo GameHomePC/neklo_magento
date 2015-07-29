@@ -1,3 +1,5 @@
+.header { z-index: 16; position: relative; }
+
 //================
 // menuButton
 //================
@@ -10,7 +12,7 @@
     user-select: none;
     cursor: pointer;
     z-index: 15;
-    transition: all 1000ms ease;
+    transition: all 500ms ease;
 
     @include breakpointmedia(768, 'max-width') {
         width: 100%;
@@ -68,11 +70,14 @@
     background: url('../images/bg-nav.jpg');
     padding: 90px 50px 90px 70px;
     box-sizing: border-box;
-    z-index: 5;
+    z-index: 15;
+    transition: all 500ms ease;
+    transform: translateX(-360px);
 
     @include breakpointmedia(768, 'max-width') {
         padding: 10px;
         width: 180px;
+        transform: translateX(-180px);
     }
 }
 
@@ -137,27 +142,16 @@
     }
 }
 
-.section {
-    animation-duration: 1000ms;
-
-    &.animateIn {
-        animation-name: flipInX;
-    }
-
-    &.animateOut {
-        animation-name: flipInX;
-    }
-}
-
 body.active_nav {
-    .containers-wrap, header {
-        margin-left: 360px;
+    .window, .header {
+        transform: translateX(360px);
 
         @include breakpointmedia(768, 'max-width') {
-            margin-left: 180px;
+            transform: translateX(180px);
         }
     }
 
+    .menuNav { transform: translateX(0px); }
     .onepage-pagination { opacity: 0; }
     .menuButton__item { display: none; }
     .menuButton__close { display: block; }
