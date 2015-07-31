@@ -52,7 +52,9 @@ html, body, .main, .main__inner {
 
 /* activeColor */
 body.activeColorMenu {
-    .menuButton__iconClose { @include my-sprite(closeN-2); }
+    .menuButton__iconClose {
+        background: url("../images/sprite/closeN-2.png") center center no-repeat;
+    }
     .menuButton__text { color: #fff; }
     .menuButton__line { background: #fff; }
     .onepage-pagination span { color: #fff; }

@@ -6,9 +6,6 @@
         transform: translateX(0);
     }
 
-    .bx-wrapper .bx-prev { right: -75px; }
-    .bx-wrapper .bx-next { left: -75px; }
-
     .sectionMain__title { opacity: 1; }
     .sectionMain__description { opacity: 1; }
 }
@@ -21,8 +18,8 @@
         transform: translateX(0);
     }
 
-    .bx-wrapper .bx-prev { right: -75px; }
-    .bx-wrapper .bx-next { left: -75px; }
+    .bx-wrapper .bx-prev { left: -75px; }
+    .bx-wrapper .bx-next { right: -75px; }
 
     .sectionMain__title { opacity: 1; }
     .sectionMain__description { opacity: 1; }

@@ -30,6 +30,14 @@ Constructor.prototype.init = function() {
     this.getSliderMainClick();
     this.getContactForm();
     this.getPopup();
+
+    $('.menuNav, .menuNav__over').swipe({
+        swipe:function(event, direction, distance, duration, fingerCount) {
+            if(direction == 'left') {
+                $('body').removeClass('active_nav');
+            }
+        }
+    });
 };
 
 //===============
@@ -132,7 +140,9 @@ Constructor.prototype.getMenuNavScroll = function() {
         var self = $(this),
             selfAttr = +self.attr('data-id');
 
-        if(self.hasClass('active')) return false;
+        if(!Modernizr.touch) {
+            if(self.hasClass('active')) return false;
+        }
 
         link.removeClass('active');
         self.addClass('active');

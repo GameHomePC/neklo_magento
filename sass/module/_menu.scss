@@ -1,11 +1,13 @@
-.header { z-index: 16; position: relative; }
+//.header { z-index: 16; position: relative; }
 
 //================
 // menuButton
 //================
 .menuButton {
-    position: fixed;
+    position: absolute;
+    width: 100%;
     top: 0;
+    left: 100%;
     font-size: 0;
     padding: 19px 21px;
     box-sizing: border-box;
@@ -15,7 +17,7 @@
     transition: all 500ms ease;
 
     @include breakpointmedia(768, 'max-width') {
-        width: 100%;
+        width: 1000px;
         background: #fff;
         padding: 15px 15px;
     }
@@ -24,7 +26,7 @@
 .menuButton__item {
     display: inline-block;
     vertical-align: top;
-    margin-right: 22px;
+    margin-right: 17px;
 
     &:last-child { margin-left: 0; }
 }
@@ -43,9 +45,10 @@
 .menuButton__text {
     display: inline-block;
     color: #7c7c7c;
-    font-size: 14px;
+    font-size: 15px;
     text-transform: uppercase;
-    padding-top: 4px;
+    padding-top: 3px;
+    letter-spacing: 0.5px;
     transition-duration: 1s;
 }
 
@@ -55,7 +58,13 @@
 
 .menuButton__iconClose {
     display: inline-block;
-    @include my-sprite(closeN);
+    width: 23px;
+    height: 22px;
+    background: url("../images/sprite/closeN.png") center center no-repeat;
+
+    @include breakpointmedia(768, 'max-width') {
+        background-size: 70%;
+    }
 }
 //================
 // menuNav
@@ -73,12 +82,24 @@
     z-index: 15;
     transition: all 500ms ease;
     transform: translateX(-360px);
+    -webkit-backface-visibility: hidden;
 
     @include breakpointmedia(768, 'max-width') {
         padding: 10px;
         width: 180px;
         transform: translateX(-180px);
     }
+}
+
+.menuNav__over {
+    position: fixed;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 14;
 }
 
 .menuNav__list {
@@ -143,7 +164,7 @@
 }
 
 body.active_nav {
-    .window, .header {
+    .window {
         transform: translateX(360px);
 
         @include breakpointmedia(768, 'max-width') {
@@ -152,6 +173,7 @@ body.active_nav {
     }
 
     .menuNav { transform: translateX(0px); }
+    .menuNav__over { display: block; }
     .onepage-pagination { opacity: 0; visibility: hidden; }
     .menuButton__item { display: none; }
     .menuButton__close { display: block; }

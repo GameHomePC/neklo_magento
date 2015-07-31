@@ -395,7 +395,9 @@
                 var self = $(this),
                     page_index = self.data("index");
 
-                if(self.hasClass('active')) return false;
+                if(!Modernizr.touch) {
+                    if (self.hasClass('active')) return false;
+                }
 
                 el.moveTo(page_index);
 
