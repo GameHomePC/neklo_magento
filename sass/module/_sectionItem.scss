@@ -2,6 +2,27 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    &:nth-of-type(4) {
+        @include breakpointmedia(768, 'max-width') {
+            background-image: none!important;
+            background-color: #81c2d6;
+        }
+    }
+
+    &:nth-of-type(5) {
+        @include breakpointmedia(768, 'max-width') {
+            background-image: none!important;
+            background-color: #ff7461;
+        }
+    }
+
+    &:nth-of-type(7) {
+        @include breakpointmedia(768, 'max-width') {
+            background-image: none!important;
+            background-color: #ffda33;
+        }
+    }
 }
 
 .sectionMain__content {

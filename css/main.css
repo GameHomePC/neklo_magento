@@ -2781,7 +2781,6 @@ Copyright (c) 2015 Daniel Eden
   @media screen and (max-width: 48em) {
     .menuButton {
       width: 1000px;
-      background: #fff;
       padding: 15px 15px; } }
 
 .menuButton__item {
@@ -2822,7 +2821,7 @@ Copyright (c) 2015 Daniel Eden
   background: url("../images/sprite/closeN.png") center center no-repeat; }
   @media screen and (max-width: 48em) {
     .menuButton__iconClose {
-      background-size: 70%; } }
+      background-size: 70% !important; } }
 
 .menuNav {
   position: fixed;
@@ -3646,6 +3645,18 @@ body.active_nav .menuNav__listMin li {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 48em) {
+    .sectionMain:nth-of-type(4) {
+      background-image: none !important;
+      background-color: #81c2d6; } }
+  @media screen and (max-width: 48em) {
+    .sectionMain:nth-of-type(5) {
+      background-image: none !important;
+      background-color: #ff7461; } }
+  @media screen and (max-width: 48em) {
+    .sectionMain:nth-of-type(7) {
+      background-image: none !important;
+      background-color: #ffda33; } }
 
 .sectionMain__content {
   margin-top: 55px; }

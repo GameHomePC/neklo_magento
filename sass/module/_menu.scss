@@ -18,7 +18,6 @@
 
     @include breakpointmedia(768, 'max-width') {
         width: 1000px;
-        background: #fff;
         padding: 15px 15px;
     }
 }
@@ -63,7 +62,7 @@
     background: url("../images/sprite/closeN.png") center center no-repeat;
 
     @include breakpointmedia(768, 'max-width') {
-        background-size: 70%;
+        background-size: 70%!important;
     }
 }
 //================

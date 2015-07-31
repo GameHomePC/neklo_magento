@@ -30,7 +30,14 @@ Constructor.prototype.init = function() {
     this.getSliderMainClick();
     this.getContactForm();
     this.getPopup();
+    this.getTouch();
 
+};
+
+//===============
+// getTouch
+//===============
+Constructor.prototype.getTouch = function() {
     $('.menuNav, .menuNav__over').swipe({
         swipe:function(event, direction, distance, duration, fingerCount) {
             if(direction == 'left') {
@@ -38,6 +45,21 @@ Constructor.prototype.init = function() {
             }
         }
     });
+
+    $('.menuNav__over').on('click', function() {
+        $('body').removeClass('active_nav');
+    });
+
+    if(Modernizr.touch) {
+        $(window).scroll(function() {
+            var scrollTop = $(this).scrollTop();
+            if(scrollTop >= window.innerHeight) {
+                $('body').addClass('activeColorMenu');
+            } else {
+                $('body').removeClass('activeColorMenu');
+            }
+        });
+    }
 };
 
 //===============
@@ -291,7 +313,7 @@ Constructor.prototype.getScrollPageTouch = function(index) {
     var sectionElement = $('#' + index).offset().top;
     if($(window).scrollTop() == sectionElement) return false;
     $('html, body').stop().animate({
-        scrollTop: (window.innerWidth <= 768) ? sectionElement - 48 : sectionElement
+        scrollTop: sectionElement
     }, 1000);
 };
 
@@ -347,6 +369,10 @@ Constructor.prototype.getPopup = function() {
         _this.popupTitle.text(title);
         _this.popupDescription.text(description);
         _this.showPopup();
+
+        setTimeout(function() {
+            _this.hidePopup();
+        }, 3000);
     };
 
     this.getClickHide(this.popupClose);
