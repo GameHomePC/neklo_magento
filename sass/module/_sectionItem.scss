@@ -43,6 +43,12 @@
     width: 55%;
     text-align: left;
 
+    @include breakpointmedia(900, 'max-width') {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+    }
+
     @include breakpointmedia(768, 'max-width') {
         width: 100%;
     }
@@ -56,9 +62,12 @@
 //    transition: all 1s ease;
 //    opacity: 0;
 
+    @include breakpointmedia(900, 'max-width') {
+        text-align: center;
+    }
+
     @include breakpointmedia(768, 'max-width') {
         font-size: 25px;
-        text-align: center;
     }
 }
 

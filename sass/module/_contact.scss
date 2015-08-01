@@ -24,7 +24,7 @@
         }
     }
 
-    @include breakpointmedia(768, 'max-width') {
+    @include breakpointmedia(900, 'max-width') {
         padding-left: 0;
         padding-right: 0;
         display: block;
@@ -32,6 +32,28 @@
         margin-top: 20px;
 
         &:first-child { margin-top: 0; }
+    }
+
+    @include breakpointmedia(768, 'max-width') {
+        width: 100%!important;
+
+        &:first-child { margin-top: 0; }
+    }
+}
+
+.sectionMain {
+    &:nth-child(9) {
+        @include breakpointmedia(900, 'max-width') {
+            .wrapper {
+                width: 80%;
+            }
+        }
+
+        @include breakpointmedia(768, 'max-width') {
+            .wrapper {
+                width: 100%;
+            }
+        }
     }
 }
 

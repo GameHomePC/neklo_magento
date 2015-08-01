@@ -1,5 +1,16 @@
 .sectionTwo {
     background: #27242d;
+
+    .wrapper {
+        @include breakpointmedia(900, 'max-width') {
+            width: 80%;
+        }
+
+        @include breakpointmedia(768, 'max-width') {
+            width: 100%;
+        }
+    }
+
 }
 
 .STlist {
@@ -7,7 +18,7 @@
     margin-top: 60px;
     @include clearfix();
 
-    @include breakpointmedia(768, 'max-width') {
+    @include breakpointmedia(900, 'max-width') {
         margin-top: 30px;
     }
 }
@@ -18,7 +29,7 @@
 //    opacity: 0;
 //    transition: all 1s ease;
 
-    @include breakpointmedia(768, 'max-width') {
+    @include breakpointmedia(900, 'max-width') {
         display: block;
         width: 100%!important;
         padding-left: 0;
@@ -32,7 +43,7 @@
 .STlist__title {
     position: relative;
 
-    @include breakpointmedia(768, 'max-width') {
+    @include breakpointmedia(900, 'max-width') {
         text-align: center;
     }
 }
@@ -45,7 +56,7 @@
     font-size: 100px;
     color: #ffffff;
 
-    @include breakpointmedia(768, 'max-width') {
+    @include breakpointmedia(900, 'max-width') {
         display: inline-block;
         position: relative;
         right: 0;

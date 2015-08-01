@@ -6,10 +6,27 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
         <meta http-equiv="ScreenOrientation" content="autoRotate:enabled">
+        <meta name="description" content="We develop best Magento ecommerce websites. Magento architecture, integration, cloud migration, load balancing, front end, mobile development and a lot more.">
         <title>Ecommerce Website Development on Magento - Neklo Solutions</title>
         <link rel="stylesheet" href="css/main.css">
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-65823053-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
     </head>
     <body>
+	<?php
+	require_once 'conf.php';
+	
+	?>
+	
+	
         <div class="menuNav__over"></div>
         <div class="menuNav">
             <ul class="menuNav__list" id="menuNavList">
@@ -153,7 +170,7 @@
                                                         <h3>poprageous.com</h3>
                                                         <p>Incredibly innovative online store of Poprageous brand printed apparel. Offering a unique opportunity to create clothing of a custom silhouette and design and then see a 3D model of it being displayed, the store provides a revolutionary new online shopping experience to those fearless with their fashion.</p>
                                                         <div class="sliderMain__iconItem">
-                                                            <a href="http://www.poprageous.com/" target="_blank"><i class="icon icon_1"></i></a>
+                                                            <a href="http://beta.poprageous.com/" target="_blank"><i class="icon icon_1"></i></a>
                                                             <span class="sliderSee"><i class="icon icon_2"></i></span>
                                                         </div>
                                                         <i class="openHoverIcon"></i>
@@ -256,7 +273,7 @@
                                                 Enjoy.
                                             </p>
 
-                                            <a class="btn btn-animate" href="#">
+                                            <a class="btn btn-animate" href="http://store.neklo.com/" target="_blank">
                                                 <span>View Store</span>
                                             </a>
                                         </div>
@@ -288,7 +305,7 @@
                                                 Magento architecture, integration, cloud migration, load balancing, front end, mobile development and a lot more – whatever Magento service is needed, we are here to provide you with exactly what you want for your business. Forget freelancers: we will make the store of your dreams a reality.
                                             </p>
 
-                                            <a class="btn btn-animate" href="#"><span>Get the details</span></a>
+                                            <a class="btn btn-animate" href="http://store.neklo.com/development/" target="_blank"><span>Get the details</span></a>
                                         </div>
                                     </div>
                                 </div>
@@ -320,7 +337,7 @@
                                                 Magento!
                                             </p>
 
-                                            <a class="btn btn-animate" href="#">
+                                            <a class="btn btn-animate" href="http://cz.meet-magento.com/" target="_blank">
                                                 <span>About the conference</span>
                                             </a>
                                         </div>
@@ -354,9 +371,10 @@
                                                 operations – with our multi-featured app you are in total control of your business. Perfect both for iPhone and iPad.
                                             </p>
 
-                                            <a class="btn-images" href="#">
+                                            <span class="btn-images">
                                                 <img src="images/button-app-store.jpg" alt="">
-                                            </a>
+                                                <img src="images/button-google-play.jpg" alt="">
+                                            </span>
                                         </div>
                                     </div>
                                 </div>
@@ -437,6 +455,14 @@
                                                         </div>
 
                                                         <div class="group">
+                                                            <div class="g-recaptcha" data-sitekey="<?php echo RE_CAPTCHA_SITE_KEY; ?>"></div>
+                                                            
+															<script src="https://www.google.com/recaptcha/api.js"></script>
+															
+										
+														</div>
+
+                                                        <div class="group">
                                                             <fieldset class="fieldset form-field coll-12">
                                                                 <button class="btn btn-white">Send</button>
                                                             </fieldset>
@@ -477,6 +503,7 @@
             <p>Description Description Description Description Description Description Description Description Description Description Description</p>
         </div>
 
+        
         <script src="js/jquery-1.11.3.min.js"></script>
         <script src="js/jquery.touchSwipe.js"></script>
         <script src="js/modernizr.custom.41574.js"></script>

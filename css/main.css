@@ -292,7 +292,7 @@ input, textarea {
           transition: all 500ms ease;
   cursor: pointer; }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 56.25em) {
   .btn-animate {
     margin-left: auto;
     margin-right: auto;
@@ -357,6 +357,10 @@ input, textarea {
 .btn-images {
   display: inline-block;
   margin-top: 25px; }
+  .btn-images img {
+    margin-left: 10px; }
+  .btn-images img:first-child {
+    margin-left: 0; }
   @media screen and (max-width: 48em) {
     .btn-images img {
       width: 100px; } }
@@ -3308,6 +3312,12 @@ body.active_nav .menuNav__listMin li {
 
 .sectionTwo {
   background: #27242d; }
+  @media screen and (max-width: 56.25em) {
+    .sectionTwo .wrapper {
+      width: 80%; } }
+  @media screen and (max-width: 48em) {
+    .sectionTwo .wrapper {
+      width: 100%; } }
 
 .STlist {
   display: block;
@@ -3316,14 +3326,14 @@ body.active_nav .menuNav__listMin li {
     content: "";
     display: block;
     clear: both; }
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 56.25em) {
     .STlist {
       margin-top: 30px; } }
 
 .STlist__item {
   padding-left: 55px;
   padding-right: 55px; }
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 56.25em) {
     .STlist__item {
       display: block;
       width: 100% !important;
@@ -3335,7 +3345,7 @@ body.active_nav .menuNav__listMin li {
 
 .STlist__title {
   position: relative; }
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 56.25em) {
     .STlist__title {
       text-align: center; } }
 
@@ -3346,7 +3356,7 @@ body.active_nav .menuNav__listMin li {
   font-weight: 100;
   font-size: 100px;
   color: #ffffff; }
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 56.25em) {
     .STlist__number {
       display: inline-block;
       position: relative;
@@ -3495,11 +3505,6 @@ body.active_nav .menuNav__listMin li {
       padding: 10px 10px; } }
 
 .sliderMain__content {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
   text-align: center; }
   .sliderMain__content h3 {
     font-size: 30px;
@@ -3622,11 +3627,6 @@ body.active_nav .menuNav__listMin li {
     opacity: 1;
     height: auto;
     top: 0; }
-  .sliderContentMain.openImagesList .openItem .sliderMain__content {
-    top: auto;
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0); }
   .sliderContentMain.openImagesList .openItem p, .sliderContentMain.openImagesList .openItem .sliderMain__iconItem, .sliderContentMain.openImagesList .openItem .sliderMain__logo {
     display: none; }
   .sliderContentMain.openImagesList .openItem h3:after {
@@ -3672,6 +3672,11 @@ body.active_nav .menuNav__listMin li {
   vertical-align: top;
   width: 55%;
   text-align: left; }
+  @media screen and (max-width: 56.25em) {
+    .sectionMain__item {
+      width: 80%;
+      margin: 0 auto;
+      display: block; } }
   @media screen and (max-width: 48em) {
     .sectionMain__item {
       width: 100%; } }
@@ -3681,10 +3686,12 @@ body.active_nav .menuNav__listMin li {
   font-weight: bold;
   text-transform: uppercase;
   color: #ffffff; }
+  @media screen and (max-width: 56.25em) {
+    .sectionMain__title {
+      text-align: center; } }
   @media screen and (max-width: 48em) {
     .sectionMain__title {
-      font-size: 25px;
-      text-align: center; } }
+      font-size: 25px; } }
 
 .sectionMain__description {
   color: #ffffff;
@@ -3838,7 +3845,7 @@ html.no-touch, .no-touch body {
     text-decoration: none; }
     .contacts__item a:hover {
       text-decoration: underline; }
-  @media screen and (max-width: 48em) {
+  @media screen and (max-width: 56.25em) {
     .contacts__item {
       padding-left: 0;
       padding-right: 0;
@@ -3847,6 +3854,18 @@ html.no-touch, .no-touch body {
       margin-top: 20px; }
       .contacts__item:first-child {
         margin-top: 0; } }
+  @media screen and (max-width: 48em) {
+    .contacts__item {
+      width: 100% !important; }
+      .contacts__item:first-child {
+        margin-top: 0; } }
+
+@media screen and (max-width: 56.25em) {
+  .sectionMain:nth-child(9) .wrapper {
+    width: 80%; } }
+@media screen and (max-width: 48em) {
+  .sectionMain:nth-child(9) .wrapper {
+    width: 100%; } }
 
 .contacts .sectionMain__description {
   margin-top: 0; }

@@ -248,7 +248,7 @@ Constructor.prototype.getScrollPage = function() {
     menu.find("a[data-id='" + 1 + "']").addClass('active');
 
     this.getScrollFunc = function() {
-        if(!Modernizr.mq('(max-width: 1024px)')) {
+        if(!Modernizr.touch) {
             _this.containersWrap.onepage_scroll({
                 sectionContainer: "section.container",
                 easing: "ease",
@@ -407,7 +407,7 @@ Constructor.prototype.getContactForm = function() {
             $.ajax({
                 method: "POST",
                 url: "send.php",
-                data: { name: name, email: email, message: message },
+                data: { name: name, email: email, message: message, g_recaptcha_response: jQuery('#g-recaptcha-response').val() },
                 dataType: 'json',
                 success: function(e) {
                     _this.getShowSend(e.title, e.message);
