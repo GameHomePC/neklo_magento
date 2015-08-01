@@ -117,7 +117,7 @@
                                             </div>
 
                                             <p class="STlist__description">
-                                                We gathered the best team ever possible to put the things together: our amazingly talented developers, designers, project managers, system administrators and QAs are profoundly experienced in Magento.
+                                                We’ve been working on Magento since the very first version of it came out. We know it better than anyone and believe that what we do helps eCommerce businesses around the world grow and prosper.
                                             </p>
                                         </li>
 
