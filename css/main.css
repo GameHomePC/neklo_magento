@@ -2,7 +2,7 @@
 @import url(../fonts/fonts.css);
 @import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css";
 .sprite-sprite, .icon_1, .icon_2, .btn-animate:after, .btn-animate:hover:after, .sectionOne__logo, .sO__iconL1, .sO__iconL2, .sO__iconL3, .sO__iconL4, .sO__iconL5, .sO__iconL6, .sO__iconL7, .sO__iconR1, .sO__iconR2, .sO__iconR3, .sO__iconR4, .sO__iconR5, .sO__iconR6, .sO__iconR7, .bx-wrapper .bx-prev:hover:before, .bx-wrapper .bx-prev:before, .bx-wrapper .bx-next:hover:before, .bx-wrapper .bx-next:before, .sliderMain__iconItem a:hover .icon_1, .sliderMain__iconItem span:hover .icon_1, .sliderMain__iconItem a:hover .icon_2, .sliderMain__iconItem span:hover .icon_2, .openHoverIcon:before, .sliderContentMain__close {
-  background-image: url('/images/sprite-sb0a1eac37a.png');
+  background-image: url('/images/sprite-s445e6d3c9d.png');
   background-repeat: no-repeat; }
 
 /* sprite */
@@ -191,18 +191,18 @@ body.viewing-page-7 .onepage-pagination a:hover i {
   display: inline-block; }
 
 .icon_1 {
-  background-position: 0 -1119px;
+  background-position: 0 -1073px;
   width: 24px;
   height: 24px; }
   .icon_1:hover, .icon_1.chain-hover {
-    background-position: 0 -1095px; }
+    background-position: 0 -1049px; }
 
 .icon_2 {
-  background-position: 0 -1203px;
+  background-position: 0 -1157px;
   width: 24px;
   height: 16px; }
   .icon_2:hover, .icon_2.eye-hover {
-    background-position: 0 -1187px; }
+    background-position: 0 -1141px; }
 
 .tl {
   text-align: left; }
@@ -2628,6 +2628,74 @@ Copyright (c) 2015 Daniel Eden
   100% {
     -webkit-transform: scale(1.1) translateX(-10px);
             transform: scale(1.1) translateX(-10px); } }
+@-webkit-keyframes scaleAnimateSpan {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; } }
+@keyframes scaleAnimateSpan {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; } }
+@-webkit-keyframes scaleAnimateI {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; } }
+@keyframes scaleAnimateI {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; } }
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com
@@ -2822,7 +2890,7 @@ Copyright (c) 2015 Daniel Eden
   display: inline-block;
   width: 23px;
   height: 22px;
-  background: url("../images/sprite/closeN.png") center center no-repeat; }
+  background: url("../images/sprite/closeN-2.png") center center no-repeat; }
   @media screen and (max-width: 48em) {
     .menuButton__iconClose {
       background-size: 70% !important; } }
@@ -2939,6 +3007,11 @@ body.active_nav .menuNav__over {
 body.active_nav .onepage-pagination {
   opacity: 0;
   visibility: hidden; }
+body.active_nav .menuButton {
+  margin-left: -65px; }
+  @media screen and (max-width: 48em) {
+    body.active_nav .menuButton {
+      margin-left: -50px; } }
 body.active_nav .menuButton__item {
   display: none; }
 body.active_nav .menuButton__close {
@@ -3032,7 +3105,7 @@ body.active_nav .menuNav__listMin li {
 .sectionOne__logo {
   display: block;
   margin: 0 auto;
-  background-position: 0 -1219px;
+  background-position: 0 -1173px;
   width: 192px;
   height: 230px; }
 
@@ -3429,12 +3502,10 @@ body.active_nav .menuNav__listMin li {
     display: inline-block;
     margin-top: 14px;
     margin-right: 3px;
-    background-position: 0 -1009px;
+    background-position: 0 -986px;
     width: 16px;
     height: 23px;
     content: ""; }
-    .bx-wrapper .bx-prev:before:hover, .bx-wrapper .bx-prev:before.arrow-left-hover {
-      background-position: 0 -986px; }
 .bx-wrapper .bx-next {
   right: -120px;
   -webkit-transform: translateX(500px);
@@ -3449,12 +3520,10 @@ body.active_nav .menuNav__listMin li {
     display: inline-block;
     margin-top: 14px;
     margin-left: 3px;
-    background-position: 0 -1055px;
+    background-position: 0 -1009px;
     width: 16px;
     height: 23px;
     content: ""; }
-    .bx-wrapper .bx-next:before:hover, .bx-wrapper .bx-next:before.arrow-right-hover {
-      background-position: 0 -1032px; }
 
 .sliderMain__item {
   background: url("../images/bg_slider_top.jpg") no-repeat;
@@ -3556,11 +3625,11 @@ body.active_nav .menuNav__listMin li {
     .sliderMain__iconItem a:hover, .sliderMain__iconItem span:hover {
       background: #fff; }
       .sliderMain__iconItem a:hover .icon_1, .sliderMain__iconItem span:hover .icon_1 {
-        background-position: 0 -1095px;
+        background-position: 0 -1049px;
         width: 24px;
         height: 24px; }
       .sliderMain__iconItem a:hover .icon_2, .sliderMain__iconItem span:hover .icon_2 {
-        background-position: 0 -1187px;
+        background-position: 0 -1141px;
         width: 24px;
         height: 16px; }
     @media screen and (max-width: 48em) {
@@ -3608,7 +3677,7 @@ body.active_nav .menuNav__listMin li {
   position: absolute;
   right: -30px;
   top: -30px;
-  background-position: 0 -1143px;
+  background-position: 0 -1097px;
   width: 23px;
   height: 22px;
   cursor: pointer; }
@@ -3760,7 +3829,9 @@ html.no-touch, .no-touch body {
           transition: all 0.4s ease; }
   .onepage-pagination li {
     position: relative;
-    display: block; }
+    display: block;
+    -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
     .onepage-pagination li.opacity3 span {
       opacity: 0.3; }
     .onepage-pagination li.opacity3 i {
@@ -3785,7 +3856,9 @@ html.no-touch, .no-touch body {
   .onepage-pagination a {
     display: block;
     text-align: right;
-    padding: 3px 23px 3px 0; }
+    padding: 3px 23px 3px 0;
+    -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
     .onepage-pagination a.active span {
       -webkit-transform: scale(1.1) translateX(-10px);
           -ms-transform: scale(1.1) translateX(-10px);
@@ -3831,6 +3904,147 @@ html.no-touch, .no-touch body {
       border-radius: 50%;
       background: #888888;
       content: ''; }
+
+.activePagination .onepage-pagination li:nth-of-type(1) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(1) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(2) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(2) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.33333s;
+          animation-delay: 0.33333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(3) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(3) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(4) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(4) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.66667s;
+          animation-delay: 0.66667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(5) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.83333s;
+          animation-delay: 0.83333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(5) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.83333s;
+          animation-delay: 0.83333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(6) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(6) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(7) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1.16667s;
+          animation-delay: 1.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(7) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 1.16667s;
+          animation-delay: 1.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(8) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1.33333s;
+          animation-delay: 1.33333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(8) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 1.33333s;
+          animation-delay: 1.33333s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(9) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(9) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(10) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1.66667s;
+          animation-delay: 1.66667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(10) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 1.66667s;
+          animation-delay: 1.66667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
 
 .contactsForm {
   display: inline-block;

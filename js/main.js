@@ -31,7 +31,21 @@ Constructor.prototype.init = function() {
     this.getContactForm();
     this.getPopup();
     this.getTouch();
+    this.getNoTouch();
 
+};
+
+//===============
+// getNoTouch
+//===============
+Constructor.prototype.getNoTouch = function() {
+    if(!Modernizr.touch) {
+        $(window).on('load', function() {
+            setTimeout(function() {
+                $('body').addClass('activePagination');
+            }, 2000);
+        });
+    }
 };
 
 //===============
