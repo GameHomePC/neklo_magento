@@ -40,11 +40,9 @@ Constructor.prototype.init = function() {
 //===============
 Constructor.prototype.getNoTouch = function() {
     if(!Modernizr.touch) {
-        $(window).on('load', function() {
-            setTimeout(function() {
-                $('body').addClass('activePagination');
-            }, 2000);
-        });
+        setTimeout(function() {
+            $('body').addClass('activePagination');
+        }, 2000);
     }
 };
 
