@@ -20,13 +20,29 @@
 
         </script>
     </head>
-    <body>
-	<?php
-	require_once 'conf.php';
-	
-	?>
-	
-	
+    <body class="preloaderInit">
+        <?php
+            require_once 'conf.php';
+        ?>
+
+        <div class="preloader">
+            <section class="sectionOne">
+                <section class="main">
+                    <div class="main__inner">
+                        <figure class="sectionOne__figure">
+                            <div class="sectionOne__content">
+                                <i class="sectionOne__logo"></i>
+
+                                <div class="sectionOne__loading">
+                                    <img src="images/loading-page.gif" alt="">
+                                </div>
+                            </div>
+                        </figure>
+                    </div>
+                </section>
+            </section>
+        </div>
+
         <div class="menuNav__over"></div>
         <div class="menuNav">
             <ul class="menuNav__list" id="menuNavList">

@@ -8,16 +8,16 @@ var browserSync = require('browser-sync').create();
 var conf = {
     sass: {
         watch: './sass/**/*.scss',
-        rubySass: 'sass/',
-        css: 'css',
+        rubySass: './sass/',
+        css: './css',
         map: './'
     },
-    templatesPath: '**/*.html',
+    templatesPath: './*.php',
     fonts: {
         dirFonts: './fonts',
         listFonts: './*.list'
     },
-    dirJS: './**/*.js'
+    dirJS: './js/*.js'
 };
 
 // ==============

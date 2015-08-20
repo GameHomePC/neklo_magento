@@ -2628,74 +2628,6 @@ Copyright (c) 2015 Daniel Eden
   100% {
     -webkit-transform: scale(1.1) translateX(-10px);
             transform: scale(1.1) translateX(-10px); } }
-@-webkit-keyframes scaleAnimateSpan {
-  0% {
-    -webkit-transform: scale(1) translateX(0);
-            transform: scale(1) translateX(0);
-    opacity: 0; }
-  50% {
-    -webkit-transform: scale(1.1) translateX(-10px);
-            transform: scale(1.1) translateX(-10px);
-    opacity: 1; }
-  70% {
-    -webkit-transform: scale(1.1) translateX(-10px);
-            transform: scale(1.1) translateX(-10px);
-    opacity: 1; }
-  100% {
-    -webkit-transform: scale(1) translateX(0);
-            transform: scale(1) translateX(0);
-    opacity: 0; } }
-@keyframes scaleAnimateSpan {
-  0% {
-    -webkit-transform: scale(1) translateX(0);
-            transform: scale(1) translateX(0);
-    opacity: 0; }
-  50% {
-    -webkit-transform: scale(1.1) translateX(-10px);
-            transform: scale(1.1) translateX(-10px);
-    opacity: 1; }
-  70% {
-    -webkit-transform: scale(1.1) translateX(-10px);
-            transform: scale(1.1) translateX(-10px);
-    opacity: 1; }
-  100% {
-    -webkit-transform: scale(1) translateX(0);
-            transform: scale(1) translateX(0);
-    opacity: 0; } }
-@-webkit-keyframes scaleAnimateI {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    border-color: transparent; }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    border-color: #888888; }
-  70% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    border-color: #888888; }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    border-color: transparent; } }
-@keyframes scaleAnimateI {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    border-color: transparent; }
-  50% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    border-color: #888888; }
-  70% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
-    border-color: #888888; }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    border-color: transparent; } }
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com
@@ -2890,7 +2822,7 @@ Copyright (c) 2015 Daniel Eden
   display: inline-block;
   width: 23px;
   height: 22px;
-  background: url("../images/sprite/closeN-2.png") center center no-repeat; }
+  background: url("../images/sprite/closeN.png") center center no-repeat; }
   @media screen and (max-width: 48em) {
     .menuButton__iconClose {
       background-size: 70% !important; } }
@@ -3007,11 +2939,6 @@ body.active_nav .menuNav__over {
 body.active_nav .onepage-pagination {
   opacity: 0;
   visibility: hidden; }
-body.active_nav .menuButton {
-  margin-left: -65px; }
-  @media screen and (max-width: 48em) {
-    body.active_nav .menuButton {
-      margin-left: -50px; } }
 body.active_nav .menuButton__item {
   display: none; }
 body.active_nav .menuButton__close {
@@ -3246,6 +3173,12 @@ body.active_nav .menuNav__listMin li {
   left: 251px;
   top: 68px; }
 
+.sectionOne__loading {
+  margin-top: 20px;
+  text-align: center; }
+  .sectionOne__loading img {
+    opacity: 0.4; }
+
 .sectionOne__iconBottom {
   position: absolute;
   bottom: 14px;
@@ -3323,6 +3256,28 @@ body.active_nav .menuNav__listMin li {
     -webkit-animation-delay: .2s;
             animation-delay: .2s;
     content: ""; }
+
+.preloader {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease; }
+  .preloader .sectionOne {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.preloaderInit .preloader {
+  visibility: visible;
+  opacity: 1; }
 
 .sectionOne.active .sO__iconL1, .sectionOne.active .sO__iconL2, .sectionOne.active .sO__iconL3, .sectionOne.active .sO__iconL4, .sectionOne.active .sO__iconL5, .sectionOne.active .sO__iconL6, .sectionOne.active .sO__iconL7,
 .sectionOne.active .sO__iconR1, .sectionOne.active .sO__iconR2, .sectionOne.active .sO__iconR3, .sectionOne.active .sO__iconR4, .sectionOne.active .sO__iconR5, .sectionOne.active .sO__iconR6, .sectionOne.active .sO__iconR7 {
@@ -3788,34 +3743,20 @@ html.no-touch, .no-touch body {
   -webkit-transition: all 500ms ease !important;
           transition: all 500ms ease !important; }
 
-.section {
-  z-index: 10;
-  left: 0 !important; }
-  .section.active {
-    z-index: 12; }
-  .section.animateIn {
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
-    z-index: 11; }
-  .section.animateOut {
-    -webkit-animation-duration: 1000ms;
-            animation-duration: 1000ms;
-    -webkit-animation-name: slideOutUp;
-            animation-name: slideOutUp;
-    z-index: 13; }
-
 .containers-wrap, .window {
   background: #fff;
   position: absolute !important;
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
-  z-index: 10; }
+  width: 100%; }
   @media screen and (max-width: 48em) {
     .containers-wrap, .window {
       height: auto;
       box-sizing: border-box; } }
+
+.window {
+  z-index: 10; }
 
 .onepage-pagination {
   position: absolute;
@@ -3829,9 +3770,7 @@ html.no-touch, .no-touch body {
           transition: all 0.4s ease; }
   .onepage-pagination li {
     position: relative;
-    display: block;
-    -webkit-transition: all 0.4s ease;
-            transition: all 0.4s ease; }
+    display: block; }
     .onepage-pagination li.opacity3 span {
       opacity: 0.3; }
     .onepage-pagination li.opacity3 i {
@@ -3856,9 +3795,7 @@ html.no-touch, .no-touch body {
   .onepage-pagination a {
     display: block;
     text-align: right;
-    padding: 3px 23px 3px 0;
-    -webkit-transition: all 0.4s ease;
-            transition: all 0.4s ease; }
+    padding: 3px 23px 3px 0; }
     .onepage-pagination a.active span {
       -webkit-transform: scale(1.1) translateX(-10px);
           -ms-transform: scale(1.1) translateX(-10px);
@@ -3904,147 +3841,6 @@ html.no-touch, .no-touch body {
       border-radius: 50%;
       background: #888888;
       content: ''; }
-
-.activePagination .onepage-pagination li:nth-of-type(1) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 0.16667s;
-          animation-delay: 0.16667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(1) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 0.16667s;
-          animation-delay: 0.16667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(2) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(2) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 0.33333s;
-          animation-delay: 0.33333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(3) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(3) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(4) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 0.66667s;
-          animation-delay: 0.66667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(4) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 0.66667s;
-          animation-delay: 0.66667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(5) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 0.83333s;
-          animation-delay: 0.83333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(5) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 0.83333s;
-          animation-delay: 0.83333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(6) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(6) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(7) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 1.16667s;
-          animation-delay: 1.16667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(7) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 1.16667s;
-          animation-delay: 1.16667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(8) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 1.33333s;
-          animation-delay: 1.33333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(8) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 1.33333s;
-          animation-delay: 1.33333s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(9) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(9) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(10) span {
-  -webkit-animation-name: scaleAnimateSpan;
-          animation-name: scaleAnimateSpan;
-  -webkit-animation-delay: 1.66667s;
-          animation-delay: 1.66667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
-.activePagination .onepage-pagination li:nth-of-type(10) i {
-  -webkit-animation-name: scaleAnimateI;
-          animation-name: scaleAnimateI;
-  -webkit-animation-delay: 1.66667s;
-          animation-delay: 1.66667s;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s; }
 
 .contactsForm {
   display: inline-block;

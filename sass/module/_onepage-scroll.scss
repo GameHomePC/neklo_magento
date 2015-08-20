@@ -4,26 +4,6 @@ html.no-touch, .no-touch body {
 
 .window { transition: all 500ms ease!important; }
 
-.section {
-    z-index: 10;
-    left: 0!important;
-
-    &.active {
-        z-index: 12;
-    }
-
-    &.animateIn {
-        animation-duration: 1000ms;
-        z-index: 11;
-    }
-
-    &.animateOut {
-        animation-duration: 1000ms;
-        animation-name: slideOutUp;
-        z-index: 13;
-    }
-}
-
 .containers-wrap, .window {
     background: #fff;
     position: absolute!important;
@@ -31,7 +11,6 @@ html.no-touch, .no-touch body {
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 10;
 
     @include breakpointmedia(768, 'max-width') {
         height: auto;
@@ -39,7 +18,9 @@ html.no-touch, .no-touch body {
     }
 }
 
-
+.window {
+    z-index: 10;
+}
 
 .onepage-pagination {
     position: absolute;
@@ -52,8 +33,6 @@ html.no-touch, .no-touch body {
     li {
         position: relative;
         display: block;
-        transition: all 0.4s ease;
-
         &.opacity3 {
             span { opacity: 0.3; }
             i { border-color: rgba(136, 136, 136, 0.3); }
@@ -84,14 +63,17 @@ html.no-touch, .no-touch body {
         display: block;
         text-align: right;
         padding: 3px 23px 3px 0;
-        transition: all 0.4s ease;
 
         &.active {
             span {
+//                animation-name: scaleAnimate2;
+//                animation-duration: 300ms;
                 transform: scale(1.1) translateX(-10px);
                 opacity: 1;
             }
             i {
+//                animation-name: scaleAnimate;
+//                animation-duration: 1s;
                 transform: scale(1.5);
                 border-color: #888888;
             }
@@ -99,10 +81,14 @@ html.no-touch, .no-touch body {
 
         &:hover {
             span {
+//                animation-name: scaleAnimate2;
+//                animation-duration: 300ms;
                 transform: scale(1.1) translateX(-10px);
                 opacity: 1;
             }
             i {
+//                animation-name: scaleAnimate;
+//                animation-duration: 1s;
                 transform: scale(1.5);
                 border-color: #888888;
             }
@@ -134,29 +120,6 @@ html.no-touch, .no-touch body {
             border-radius: 50%;
             background: #888888;
             content: '';
-        }
-    }
-}
-
-$columnsNav: 10;
-.activePagination {
-    .onepage-pagination {
-        li {
-            @for $i from 1 through $columnsNav {
-                &:nth-of-type(#{$i}) {
-
-                    span {
-                        animation-name: scaleAnimateSpan;
-                        animation-delay: $i / 6  + s;
-                        animation-duration: 0.6s;
-                    }
-                    i {
-                        animation-name: scaleAnimateI;
-                        animation-delay: $i / 6  + s;
-                        animation-duration: 0.6s;
-                    }
-                }
-            }
         }
     }
 }

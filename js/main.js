@@ -182,7 +182,7 @@ Constructor.prototype.getMenuNavScroll = function() {
 
         link.removeClass('active');
         self.addClass('active');
-        _this.isFocus();
+        //_this.isFocus();
         _this.getScrollPageClick(selfAttr);
 
         return false;
@@ -196,7 +196,7 @@ Constructor.prototype.getNavigation = function() {
     var _this = this;
 
     this.navigationButtom.on('click', function() {
-        _this.isFocus();
+        //_this.isFocus();
 
         if(!_this.body.hasClass('active_nav')) {
             _this.body.addClass('active_nav');
@@ -218,37 +218,11 @@ Constructor.prototype.isSectionTitle = function() {
             effect: "slideInDown",
             shuffle: true,
             delay: 20
-        },
-        out: {
-            effect: 'hinge',
-            delayScale: 1.5,
-            delay: 0,
-            sync: false,
-            shuffle: false
         }
     });
 
-    //$('.title_sub_js').textillate({
-    //    autoStart: true,
-    //    minDisplayTime: 500,
-    //    initialDelay: 400,
-    //    in: {
-    //        effect: "slideInDown",
-    //        shuffle: true,
-    //        delay: 10
-    //    },
-    //    out: {
-    //        effect: 'hinge',
-    //        delayScale: 1.5,
-    //        delay: 0,
-    //        sync: false,
-    //        shuffle: false
-    //    }
-    //});
-
     if(Modernizr.touch) {
        $('.title_js').textillate('start');
-       //$('.title_sub_js').textillate('start');
     }
 };
 
@@ -266,18 +240,17 @@ Constructor.prototype.getScrollPage = function() {
             _this.containersWrap.onepage_scroll({
                 sectionContainer: "section.container",
                 easing: "ease",
-                animationTime: 1000,
+                animationTime: 1e3,
                 pagination: true,
-                paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
-                updateURL: false,
+                updateURL: true,
                 responsiveFallback: false,
-                direction: "horizontal",
+                paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
                 beforeMove: function(index) {
                     var title = $('.section.container[data-index="' + index + '"]');
                     title.find('.title_js').textillate('start');
                     //title.find('.title_sub_js').textillate('start');
 
-                    _this.isFocus();
+                    //_this.isFocus();
                     menu.find("a").removeClass('active');
                     menu.find("a[data-id='" + index + "']").addClass('active');
 
@@ -286,16 +259,13 @@ Constructor.prototype.getScrollPage = function() {
                     } else {
                         _this.body.removeClass('activeColorMenu');
                     }
-
-                    setTimeout(function() {
-                        _this.containersWrap.find('.section').removeClass('animateIn animateOut');
-                    }, 1000);
                 },
                 afterMove: function(index) {
 
                 },
                 loop: false,
-                keyboard: false
+                keyboard: true,
+                direction: "vertical"
             });
         } else {
             $(document).unbind('mousewheel DOMMouseScroll MozMousePixelScroll');
@@ -453,5 +423,8 @@ $(function() {
         contactsForm: '.contactsForm'
     });
 
-    constructor.init();
+    $(window).on('load', function() {
+        $('body').removeClass('preloaderInit');
+        constructor.init();
+    });
 });

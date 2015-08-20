@@ -59,7 +59,7 @@
     display: inline-block;
     width: 23px;
     height: 22px;
-    background: url("../images/sprite/closeN-2.png") center center no-repeat;
+    background: url("../images/sprite/closeN.png") center center no-repeat;
 
     @include breakpointmedia(768, 'max-width') {
         background-size: 70%!important;
@@ -174,13 +174,6 @@ body.active_nav {
     .menuNav { transform: translateX(0px); }
     .menuNav__over { display: block; }
     .onepage-pagination { opacity: 0; visibility: hidden; }
-
-    .menuButton {
-        margin-left: -65px;
-        @include breakpointmedia(768, 'max-width') {
-            margin-left: -50px;
-        }
-    }
     .menuButton__item { display: none; }
     .menuButton__close { display: block; }
 

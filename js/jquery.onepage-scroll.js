@@ -108,14 +108,14 @@
                 }
             } else {
                 $(this).css({
-                    //"-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    //"-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    //"-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    //"-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    //"-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
-                    //"-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
-                    //"transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)"
-                    //"transition": "all " + settings.animationTime + "ms " + settings.easing
+                    "-webkit-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    "-webkit-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    "-moz-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    "-moz-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    "-ms-transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    "-ms-transition": "all " + settings.animationTime + "ms " + settings.easing,
+                    "transform": ( settings.direction == 'horizontal' ) ? "translate3d(" + pos + "%, 0, 0)" : "translate3d(0, " + pos + "%, 0)",
+                    "transition": "all " + settings.animationTime + "ms " + settings.easing
                 });
             }
             $(this).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
@@ -143,8 +143,7 @@
             if (typeof settings.beforeMove == 'function') settings.beforeMove( next.data("index"));
 
             current.removeClass("active");
-            current.addClass("animateOut");
-            next.addClass("active animateIn");
+            next.addClass("active");
 
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
@@ -181,8 +180,7 @@
             if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
 
             current.removeClass("active");
-            current.addClass("animateOut");
-            next.addClass("active animateIn");
+            next.addClass("active");
 
             if(settings.pagination == true) {
                 $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
@@ -205,8 +203,7 @@
                 if (typeof settings.beforeMove == 'function') settings.beforeMove(next.data("index"));
 
                 current.removeClass("active");
-                current.addClass("animateOut");
-                next.addClass("active animateIn");
+                next.addClass("active");
 
                 $(".onepage-pagination li a" + ".active").removeClass("active");
                 $(".onepage-pagination li a" + "[data-index='" + (page_index) + "']").addClass("active");
@@ -402,7 +399,7 @@
                 el.moveTo(page_index);
 
                 var inputName = $('.containers-wrap').find('input[name="name"]');
-                inputName.focus();
+                //inputName.focus();
 
                 return false;
             });
