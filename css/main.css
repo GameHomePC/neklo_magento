@@ -188,6 +188,147 @@ body.viewing-page-7 .onepage-pagination a:hover i {
 
 .activePagination .onepage-pagination li:nth-of-type(1) span {
   -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 0.5 s;
+          animation-delay: 0.5 s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s; }
+.activePagination .onepage-pagination li:nth-of-type(1) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(2) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1 s;
+          animation-delay: 1 s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s; }
+.activePagination .onepage-pagination li:nth-of-type(2) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(3) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 1.5 s;
+          animation-delay: 1.5 s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s; }
+.activePagination .onepage-pagination li:nth-of-type(3) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(4) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 2 s;
+          animation-delay: 2 s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s; }
+.activePagination .onepage-pagination li:nth-of-type(4) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(5) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 2.5 s;
+          animation-delay: 2.5 s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s; }
+.activePagination .onepage-pagination li:nth-of-type(5) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(6) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 3 s;
+          animation-delay: 3 s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s; }
+.activePagination .onepage-pagination li:nth-of-type(6) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(7) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 3.5 s;
+          animation-delay: 3.5 s;
+  -webkit-animation-duration: 3.5s;
+          animation-duration: 3.5s; }
+.activePagination .onepage-pagination li:nth-of-type(7) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(8) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 4 s;
+          animation-delay: 4 s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s; }
+.activePagination .onepage-pagination li:nth-of-type(8) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(9) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 4.5 s;
+          animation-delay: 4.5 s;
+  -webkit-animation-duration: 4.5s;
+          animation-duration: 4.5s; }
+.activePagination .onepage-pagination li:nth-of-type(9) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+.activePagination .onepage-pagination li:nth-of-type(10) span {
+  -webkit-animation-name: scaleAnimateSpan;
+          animation-name: scaleAnimateSpan;
+  -webkit-animation-delay: 5 s;
+          animation-delay: 5 s;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s; }
+.activePagination .onepage-pagination li:nth-of-type(10) i {
+  -webkit-animation-name: scaleAnimateI;
+          animation-name: scaleAnimateI;
+  -webkit-animation-delay: 0.16667s;
+          animation-delay: 0.16667s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s; }
+
+.activePagination .onepage-pagination li:nth-of-type(1) span {
+  -webkit-animation-name: scaleAnimateSpan;
   animation-name: scaleAnimateSpan;
   -webkit-animation-delay: 0.16667s;
   animation-delay: 0.16667s;
@@ -2788,6 +2929,71 @@ Copyright (c) 2015 Daniel Eden
   100% {
     -webkit-transform: scale(1.1) translateX(-10px);
             transform: scale(1.1) translateX(-10px); } }
+@-webkit-keyframes scaleAnimateSpan {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0); }
+  100% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px); } }
+@keyframes scaleAnimateSpan {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0); }
+  100% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px); } }
+@keyframes scaleAnimateSpan {
+  0% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  70% {
+    -webkit-transform: scale(1.1) translateX(-10px);
+            transform: scale(1.1) translateX(-10px);
+    opacity: 1; }
+  100% {
+    -webkit-transform: scale(1) translateX(0);
+            transform: scale(1) translateX(0);
+    opacity: 0; } }
+@-webkit-keyframes scaleAnimateI {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; } }
+@keyframes scaleAnimateI {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; }
+  50% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  70% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    border-color: #888888; }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-color: transparent; } }
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
  * http://bxslider.com

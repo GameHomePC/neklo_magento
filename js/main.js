@@ -240,7 +240,7 @@ Constructor.prototype.getScrollPage = function() {
                 easing: "ease",
                 animationTime: 1e3,
                 pagination: true,
-                updateURL: true,
+                updateURL: false,
                 responsiveFallback: false,
                 paginationArray: ['Home', 'Why us?', 'Portfolio', 'EXTENSIONS', 'CUSTOM DEVELOPMENT' , 'EVENTS', 'MOBILE APP', 'EDUCATION', 'CONTACT US'],
                 beforeMove: function(index) {
