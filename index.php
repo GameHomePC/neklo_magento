@@ -519,23 +519,6 @@
             <p>Description Description Description Description Description Description Description Description Description Description Description</p>
         </div>
 
-        
-        <script src="js/jquery-1.11.3.min.js"></script>
-        <script src="js/jquery.touchSwipe.js"></script>
-        <script src="js/modernizr.custom.41574.js"></script>
-
-        <!-- slider -->
-        <script src="js/jquery.bxslider.js"></script>
-
-        <!-- validate -->
-        <script src="js/jquery.validate.min.js"></script>
-
-        <!-- animate -->
-        <script src="js/jquery.lettering.js"></script>
-        <script src="js/jquery.textillate.js"></script>
-        <script src="js/jquery.onepage-scroll.js"></script>
-
-        <!-- scroll pane -->
-        <script src="js/main.js"></script>
+        <script src="js/build/all.js"></script>
     </body>
 </html>

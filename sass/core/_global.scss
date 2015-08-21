@@ -116,27 +116,6 @@ body.viewing-page-7 {
     }
 }
 
-$columns: 10;
-.activePagination {
-    .onepage-pagination {
-        @for $i from 1 through $columns {
-            li:nth-of-type(#{$i}) {
-                span {
-                    animation-name: scaleAnimateSpan;
-                    animation-delay: $i / 2 s;
-                    animation-duration: $i / 2 + s;
-                }
-
-                i {
-                    animation-name: scaleAnimateI;
-                    animation-delay: 0.16667s;
-                    animation-duration: 0.6s;
-                }
-            }
-        }
-    }
-}
-
 .activePagination .onepage-pagination li:nth-of-type(1) span {
     -webkit-animation-name: scaleAnimateSpan;
     animation-name: scaleAnimateSpan;
