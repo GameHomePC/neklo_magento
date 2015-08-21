@@ -66,7 +66,7 @@ gulp.task('browser-sync', function() {
         ghostMode: {
             clicks: true,
             forms: true,
-            scroll: false
+            scroll: true
         },
         open: false
     });
